@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "simanta-dev": {
+      "hosting": {
+        "simanta": [
+          "simanta"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

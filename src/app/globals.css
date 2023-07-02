@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.mystyle {
+  border-radius: 40px;
+  background: #e0e0e0;
+  box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
+}
+.navbar {
+  background: #e0e0e0;
+  box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
+ 
+}
+.banner {
+  background: #e0e0e0;
+  box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+li {
+  cursor: pointer;
+  border-radius: 40px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
+}
+li:hover {
+  border-radius: 40px;
+  background: #e0e0e0;
+  box-shadow: 6px 6px 12px #9f9f9f, -6px -6px 12px #ffffff;
+}
+.btn-primary {
+  border-radius: 57px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  box-shadow: 6px 6px 6px #9f9f9f, -6px -6px 12px #ffffff;
+}
+.my-text {
+  color: #01070e;
+  text-shadow: 2px 6px 7px #86898d, -6px -6px 11px #ffffff;
+}
+.my-img {
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input, textarea {
+  padding: 1rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: inset 7px 7px 14px #b5b5b5, inset -7px -7px 14px #ffffff;
 }
