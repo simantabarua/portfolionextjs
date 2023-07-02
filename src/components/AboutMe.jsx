@@ -17,7 +17,7 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
            <SectionHeader title={"Who I'm i ?"}/>
-            <p className="text-xl font-semibold text-gray-600 my-4">
+            <p className="text-xl font-semibold text-gray-600  md:my-4">
               I&apos;m Experienced MERN stack developer with a passion for
               crafting efficient and user-friendly web applications. Skilled in
               MongoDB, Express.js, React, and Node.js, I thrive on solving
@@ -26,8 +26,8 @@ const AboutMe = () => {
               development trends.
             </p>
           </div>
-          <div className="flex flex-col gap-6 items-center max-w-4xl mx-auto  md:mt-20 text-center">
-            <div className="mystyle h-40 w-40 md:-ms-20 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row lg:flex-col gap-6 items-center  mx-auto  md:mt-20 text-center">
+            <div className="mystyle h-40 w-40 lg:-ms-20 flex items-center justify-center">
               <p className="font-semibold">
                 <span className=" text-xl font-bold text-gray-600 my-4 ms-6">
                   30+
@@ -36,8 +36,8 @@ const AboutMe = () => {
                 Project complete
               </p>
             </div>
-            <div className="mystyle h-20 w-full md:w-96 md:ms-40 md:mt-14 flex items-center justify-center">
-              <p className="font-semibold">Get a project? Let’s talk. simanta.barua@yahoo.com </p>
+            <div className="mystyle h-20  p-4 w-full  md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
+              <p className="font-semibold ">Get a project? Let’s talk. <br /> simanta.barua@yahoo.com </p>
             </div>
           </div>
         </div>

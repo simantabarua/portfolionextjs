@@ -17,13 +17,13 @@
   box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
 }
 
-li {
+.nav-link {
   cursor: pointer;
   border-radius: 40px;
   background: #e0e0e0;
   box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
 }
-li:hover {
+.nav-link:hover {
   border-radius: 40px;
   background: #e0e0e0;
   box-shadow: 6px 6px 12px #9f9f9f, -6px -6px 12px #ffffff;
@@ -52,4 +52,21 @@ input, textarea {
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: inset 7px 7px 14px #b5b5b5, inset -7px -7px 14px #ffffff;
+}
+
+.card-img{
+  overflow: hidden;
+  cursor: pointer;
+ 
+
+}
+.card-img img{
+  object-fit: cover;
+  object-position: top center;
+  transition:  all 3s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.card-img:hover img{
+  object-position: bottom center;
 }

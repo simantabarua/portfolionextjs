@@ -7,7 +7,7 @@
 .firebase
 # testing
 /coverage
-
+.firebase
 # next.js
 /.next/
 /out/

@@ -59,19 +59,21 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div id="project" className="mt-8 mystyle h-full p-8">
+    <div id="project" className="mt-8 mystyle h-full p-4 md:p-8">
       <div className="max-w-7xl mx-auto m-10 ">
         <SectionHeader title={"Few selected works."} />
         <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2  gap-8 place-items-center">
           {projects.map((project, index) => (
             <div key={index} className=" h-full w-full mystyle">
-              <div className=" h-full flex flex-col">
+              <div className="h-full flex flex-col">
                 <div>
-                <img
+                  <div className="card-img h-64">
+                  <img
                   src={project.image}
                   alt="Project Image"
-                  className="object-cover w-full h-48 rounded-t-3xl"
+                  className="object-cover w-full  rounded-t-3xl"
                 />
+               </div>
                </div>
                 <div className="p-4 flex-grow">
                   <h2 className="text-xl font-bold mb-2">
@@ -80,21 +82,21 @@ const Projects = () => {
                   <p className="text-gray-600 mb-4">
                     {project.projectDescription}
                   </p>
-                  <div className="flex justify-between">
+                  <div className=" flex justify-between px-4">
                     <a
                       href={project.githubLink}
-                      className="text-blue-500 hover:text-blue-700"
+                      className="text-blue-500 font-bold hover:text-blue-700"
                     >
                       GitHub
                     </a>
                     <a
                       href={project.liveSiteLink}
-                      className="text-blue-500 hover:text-blue-700"
+                      className="text-blue-500 font-bold hover:text-blue-700"
                     >
                       Live Site
                     </a>
                   </div>
-                  <div className="flex mt-4">
+                  <div className="flex mt-4 flex-wrap">
                     {project.technologies.map((technology, index) => (
                       <span
                         key={index}

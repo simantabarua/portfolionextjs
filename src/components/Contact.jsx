@@ -4,10 +4,13 @@ import { BsSend } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div id="contact" className=" mystyle h-full p-2 md:p-8 my-8">
+    <div id="contact" className=" mystyle h-full p-4 md:p-8 my-8">
       <div className="max-w-7xl mx-auto m-10 ">
-        <SectionHeader title={"Contact me"} />
-        <div className="max-w-4xl mystyle mx-auto p-4 md:p-12  flex flex-col gap-4 ">
+        <div className="text-center
+        ">
+          <SectionHeader title={"Contact me"} />
+        </div>
+        <div className="max-w-4xl md:mystyle mx-auto p-4 md:p-12  flex flex-col gap-4 ">
           <input type="text" placeholder="Name" className="p-4 " />
           <input
             type="text"
@@ -15,8 +18,8 @@ const Contact = () => {
             className="input input-bordered"
           />
           <textarea type="text" placeholder="Message" className="h-64" />
-                  <button>
-                      Send <BsSend className="inline"/>
+          <button className="mystyle h-16 font-bold my-">
+            Send <BsSend className="inline" />
           </button>
         </div>
       </div>
