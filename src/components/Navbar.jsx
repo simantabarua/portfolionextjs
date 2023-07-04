@@ -41,7 +41,8 @@ const Navbar = () => {
                 <Link
                   key={index}
                   href={item.id}
-                  className={`w-24 font-normal p-2 h-10 nav-link `}
+                  
+                  className={`w-24 scroll-smooth font-normal p-2 h-10 nav-link `}
                 >
                   {item.name}
                 </Link>

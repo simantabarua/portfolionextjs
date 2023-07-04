@@ -13,10 +13,10 @@ import SectionHeader from "./SectionHeader";
 const AboutMe = () => {
   return (
     <div id="about" className=" mt-8 mystyle h-full p-4 md:p-12 ">
-      <div className="max-w-7xl mx-auto my-10 ">
+      <div className=" max-w-7xl mx-auto my-10 ">
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
-           <SectionHeader title={"Who I'm i ?"}/>
+           <SectionHeader title={"Who Am I?"}/>
             <p className="text-xl font-semibold text-gray-600  md:my-4">
               I&apos;m Experienced MERN stack developer with a passion for
               crafting efficient and user-friendly web applications. Skilled in

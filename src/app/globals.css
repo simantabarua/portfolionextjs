@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html{
+  --scroll-behavior: smooth!important;
+  scroll-behavior: smooth!important;
+  scroll-padding: 2vmax;
+}
 
 .mystyle {
   border-radius: 40px;
@@ -63,10 +68,11 @@ input, textarea {
 .card-img img{
   object-fit: cover;
   object-position: top center;
-  transition:  all 3s ease-in-out;
+  transition:  all 5s ease-in-out;
   height: 100%;
   width: 100%;
 }
 .card-img:hover img{
   object-position: bottom center;
 }
+
