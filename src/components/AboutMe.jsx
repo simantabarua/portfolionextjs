@@ -16,7 +16,7 @@ const AboutMe = () => {
       <div className=" max-w-7xl mx-auto my-10 ">
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
-           <SectionHeader title={"Who Am I?"}/>
+           <SectionHeader title={"Who Am i_"}/>
             <p className="text-xl font-semibold text-gray-600  md:my-4">
               I&apos;m Experienced MERN stack developer with a passion for
               crafting efficient and user-friendly web applications. Skilled in
@@ -42,17 +42,19 @@ const AboutMe = () => {
           </div>
         </div>
         <div>
-          <SectionHeader title={"Specialized In"} />
+          <div className="py-2">
+          <SectionHeader title={"Specialized In_"} />
+        </div>
           <div className="flex justify-between flex-wrap gap-4 my-2 md:my-8">
-            <BiLogoJavascript className="w-20 h-20 mystyle p-4" />
-            <FaReact className="w-20 h-20 mystyle p-4" />
-            <FaNodeJs className="w-20 h-20 mystyle p-4" />
-            <BiLogoMongodb className="w-20 h-20 mystyle p-4" />
-            <SiExpress className="w-20 h-20 mystyle p-4" />
-            <SiTailwindcss className="w-20 h-20 mystyle p-4" />
-            <SiBootstrap className="w-20 h-20 mystyle p-4" />
-            <SiHtml5 className="w-20 h-20 mystyle p-4" />
-            <SiCss3 className="w-20 h-20 mystyle p-4" />
+            <BiLogoJavascript className="icon-style" />
+            <FaReact className="icon-style" />
+            <FaNodeJs className="icon-style" />
+            <BiLogoMongodb className="icon-style" />
+            <SiExpress className="icon-style" />
+            <SiTailwindcss className="icon-style" />
+            <SiBootstrap className="icon-style" />
+            <SiHtml5 className="icon-style" />
+            <SiCss3 className="icon-style" />
           </div>
         </div>
       </div>

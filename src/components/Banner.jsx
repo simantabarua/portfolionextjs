@@ -5,10 +5,10 @@ import AnimanteText from "./AnimanteText";
 
 const Banner = () => {
   return (
-    <div className=" lg:h-[620px] p-4 rounded-b-[40px]  banner flex flex-col-reverse lg:flex-row justify-between items-center px-4 md:px-14 lg:px-20 gap-12">
+    <div className=" lg:h-[620px] p-4 rounded-b-[40px]  banner flex flex-col-reverse lg:flex-row justify-between items-center px-4 md:px-14 lg:px-20 md:gap-12">
       <div className=" lg:flex-1 p-2 md:p-10 flex  justify-center flex-col  ">
         <div className="  md:p-4 space-y-4">
-          <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold my-text">
+          <p className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold my-text">
             Hello,
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl  font-semibold my-text">

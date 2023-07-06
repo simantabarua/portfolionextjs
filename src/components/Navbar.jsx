@@ -36,13 +36,13 @@ const Navbar = () => {
           </div>
           {/* Desktop */}
           <div className="hidden md:flex justify-end">
-            <ul className="flex gap-4 text-center">
+            <ul className="flex gap-4 text-center ">
               {menuItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.id}
                   
-                  className={`w-24 scroll-smooth font-normal p-2 h-10 nav-link `}
+                  className={`w-24 scroll-smooth font-semibold p-2 h-10 nav-link `}
                 >
                   {item.name}
                 </Link>

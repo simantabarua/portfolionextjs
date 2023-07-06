@@ -69,8 +69,8 @@ const Projects = () => {
   return (
     <div id="project" className="mt-8 mystyle h-full p-4 md:p-8">
       <div className="max-w-7xl mx-auto m-10 ">
-        <SectionHeader title={"Few selected works."} />
-        <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2  gap-8 place-items-center">
+        <SectionHeader title={"Few selected works"} />
+        <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2  gap-8 place-items-center my-2">
           {projectsData.map(renderProject)}
         </div>
       </div>
