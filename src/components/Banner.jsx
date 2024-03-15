@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import AnimateText from "./AnimateText";
-import simanta from "./../assets/simanta.jpg";
 const Banner = () => {
   return (
     <div className=" lg:h-[80vh] p-4 rounded-b-[40px]  banner flex flex-col-reverse lg:flex-row justify-between items-center px-4 md:px-14 lg:px-20 lg:gap-12">
