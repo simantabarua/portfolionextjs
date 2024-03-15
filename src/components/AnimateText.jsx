@@ -9,7 +9,7 @@ const AnimateText = () => {
       sequence={[
         "I'm Simanta Barua",
         1000,
-        "I'm a Fullstack Developer",
+        "I'm a Fullstack DEV.",
         1000,
         "I'm Creative",
         1000,

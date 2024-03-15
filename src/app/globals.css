@@ -17,6 +17,7 @@ html {
 .navbar {
   background: #e0e0e0;
   box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 .banner {
   background: #e0e0e0;
@@ -55,6 +56,7 @@ html {
   border-radius: 50%;
   background: #e0e0e0;
   box-shadow: 6px 6px 11px #9f9f9f, -6px -6px 11px #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 input,
@@ -96,3 +98,19 @@ textarea {
 .send-me-btn:active {
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.mobile-menu {
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards; 
+}
+

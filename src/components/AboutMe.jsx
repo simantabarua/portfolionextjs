@@ -34,7 +34,7 @@ const AboutMe = () => {
                   30+
                 </span>
                 <br />
-                Project complete
+                Project Complete
               </p>
             </div>
             <div className="mystyle h-20  p-4 w-full  md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
