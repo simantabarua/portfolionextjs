@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
+import SectionHeader from "./SectionHeader";
 
 const Contact = () => {
   const [isMessageSend, setIsMessageSend] = useState(false);
@@ -40,9 +41,7 @@ const Contact = () => {
           className="text-center
         "
         >
-          <p className="   text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold my-text my-2">
-            Contact me
-          </p>
+          <SectionHeader title={"Contact me"} />
         </div>
         <p
           className="text-gray-500 capitalize text-sm md:text-xl md:font-bold text-center mt-2
@@ -51,12 +50,12 @@ const Contact = () => {
           Need any help? Let&apos;s talk{" "}
         </p>
         <form ref={form} onSubmit={sendEmail}>
-          <div className="max-w-4xl md:mystyle mx-auto p-4 md:p-12  flex flex-col gap-4 ">
+          <div className="max-w-4xl md:mystyle mx-auto p-4 md:p-12  flex flex-col gap-6 ">
             <input
               type="text"
               name="user_name"
               placeholder="Name"
-              className="p-4 "
+              className="input input-bordered"
               required
             />
             <input
@@ -80,7 +79,7 @@ const Contact = () => {
             <button
               type="submit"
               value="Send"
-              className="mystyle h-16 font-bold my-"
+              className="mystyle send-me-btn h-16 font-bold"
             >
               {isSending ? "Sending ..." : "Send"} <BsSend className="inline" />
             </button>

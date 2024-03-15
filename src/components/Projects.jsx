@@ -4,13 +4,15 @@ import SectionHeader from "./SectionHeader";
 
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const fetchProjects = async () => {
     const res = await fetch("project.json");
     if (!res.ok) {
       throw new Error("failed to fetch data");
     }
-    setProjectsData(await res.json());
+    const data = await res.json();
+    setProjectsData(data);
   };
 
   useEffect(() => {
@@ -18,14 +20,14 @@ const Projects = () => {
   }, []);
 
   const renderProject = (project, index) => (
-    <div key={index} className=" h-full w-full mystyle">
+    <div key={index} className="h-full w-full mystyle">
       <div className="h-full flex flex-col">
         <div>
           <div className="card-img h-64">
             <img
               src={project.image}
               alt="Project Image"
-              className="object-cover w-full  rounded-t-3xl"
+              className="object-cover w-full rounded-t-3xl"
               loading="lazy"
             />
           </div>
@@ -37,7 +39,7 @@ const Projects = () => {
           <p className="text-gray-600 mb-4">
             {project.projectDescription}
           </p>
-          <div className=" flex justify-between px-4">
+          <div className="flex justify-between px-4">
             <a
               href={project.githubLink}
               className="text-blue-500 font-bold hover:text-blue-700"
@@ -55,7 +57,7 @@ const Projects = () => {
             {project.technologies.map((technology, index) => (
               <span
                 key={index}
-                className="mr-2 bg-gray-200  px-2 py-1 rounded-lg text-sm text-gray-700"
+                className="mr-2 bg-gray-200 px-2 py-1 rounded-lg text-sm text-gray-700"
               >
                 {technology}
               </span>
@@ -66,15 +68,30 @@ const Projects = () => {
     </div>
   );
 
+
+  const toggleShowAllProjects = () => {
+    setShowAllProjects(!showAllProjects);
+  };
+
   return (
     <div id="project" className="mt-8 mystyle h-full p-4 md:p-8">
-      <div className="max-w-7xl mx-auto m-10 ">
-        <SectionHeader title={"Few selected works"} />
-        <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2  gap-8 place-items-center my-2">
-          {projectsData.map(renderProject)}
-        </div>
+    <div className="max-w-7xl mx-auto m-8 md:mt-10 md:mb-14">
+      <SectionHeader title={"Few selected works"} />
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center my-2">
+        {showAllProjects
+          ? projectsData.map(renderProject)
+          : projectsData.slice(0, 4).map(renderProject)}
+      </div>
+      <div className="text-center mt-4">
+        <button
+          onClick={toggleShowAllProjects}
+          className="mystyle send-me-btn h-16 w-full max-w-xs mt-4 md:mt-6 font-bold"
+        >
+          {showAllProjects ? "Show Less" : "Show More"}
+        </button>
       </div>
     </div>
+  </div>
   );
 };
 

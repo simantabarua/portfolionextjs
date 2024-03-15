@@ -1,5 +1,7 @@
 {
-  "projects": {},
+  "projects": {
+    "default": "simanta-dev"
+  },
   "targets": {
     "simanta-dev": {
       "hosting": {

@@ -32,7 +32,8 @@ const Navbar = () => {
                 <HiOutlineBars3CenterLeft className="w-6 h-6" />
               )}
             </button>
-            <h2 className="p-2 font-bold text-2xl">Simanta</h2>
+            <h2 className="p-2 font-bold text-2xl lg:text-rose-300xl "><span className="animate-pulse">&lt;</span>Simanta<span className="animate-pulse">/&gt;</span></h2>
+
           </div>
           {/* Desktop */}
           <div className="hidden md:flex justify-end">

@@ -2,7 +2,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const AnimanteText = () => {
+const AnimateText = () => {
   return (
     <TypeAnimation
       preRenderFirstString={true}
@@ -27,4 +27,4 @@ const AnimanteText = () => {
   );
 };
 
-export default AnimanteText;
+export default AnimateText;

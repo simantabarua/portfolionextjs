@@ -9,6 +9,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import SectionHeader from "./SectionHeader";
+import Link from "next/link";
 
 const AboutMe = () => {
   return (
@@ -16,7 +17,7 @@ const AboutMe = () => {
       <div className=" max-w-7xl mx-auto my-10 ">
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
-           <SectionHeader title={"Who Am i_"}/>
+            <SectionHeader title={"Who Am i"} />
             <p className="text-xl font-semibold text-gray-600  md:my-4">
               I&apos;m Experienced MERN stack developer with a passion for
               crafting efficient and user-friendly web applications. Skilled in
@@ -29,7 +30,7 @@ const AboutMe = () => {
           <div className="flex flex-col md:flex-row lg:flex-col gap-6 items-center  mx-auto  md:mt-20 text-center">
             <div className="mystyle h-40 w-40 lg:-ms-20 flex items-center justify-center">
               <p className="font-semibold">
-                <span className=" text-xl font-bold text-gray-600 my-4 ms-6">
+                <span className=" text-xl 2xl:text-2xl font-bold text-gray-600 my-4 ms-6">
                   30+
                 </span>
                 <br />
@@ -37,24 +38,61 @@ const AboutMe = () => {
               </p>
             </div>
             <div className="mystyle h-20  p-4 w-full  md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
-              <p className="font-semibold ">Get a project? Let’s talk. <br /> simanta.barua@yahoo.com </p>
+              <p className="font-semibold ">
+                Get a project? Let’s talk. <br />
+                <Link href="#contact">simanta.barua@yahoo.com</Link>
+              </p>
             </div>
           </div>
         </div>
         <div>
-          <div className="py-2">
-          <SectionHeader title={"Specialized In_"} />
-        </div>
-          <div className="flex justify-between flex-wrap gap-4 my-2 md:my-8">
-            <BiLogoJavascript className="icon-style" />
-            <FaReact className="icon-style" />
-            <FaNodeJs className="icon-style" />
-            <BiLogoMongodb className="icon-style" />
-            <SiExpress className="icon-style" />
-            <SiTailwindcss className="icon-style" />
-            <SiBootstrap className="icon-style" />
-            <SiHtml5 className="icon-style" />
-            <SiCss3 className="icon-style" />
+          <div >
+            <SectionHeader title={"Specialized In"} />
+          </div>
+          <div className="flex justify-between flex-wrap gap-4 my-2 md:my-6">
+            <a href="https://javascript.com" target="_blank" title="JavaScript">
+              <BiLogoJavascript className="icon-style" />
+            </a>
+            <a href="https://reactjs.org" target="_blank" title="React">
+              <FaReact className="icon-style" />
+            </a>
+            <a href="https://nodejs.org" target="_blank" title="Node.js">
+              <FaNodeJs className="icon-style" />
+            </a>
+            <a href="https://mongodb.com" target="_blank" title="MongoDB">
+              <BiLogoMongodb className="icon-style" />
+            </a>
+            <a href="https://expressjs.com" target="_blank" title="Express.js">
+              <SiExpress className="icon-style" />
+            </a>
+            <a
+              href="https://tailwindcss.com"
+              target="_blank"
+              title="Tailwind CSS"
+            >
+              <SiTailwindcss className="icon-style" />
+            </a>
+            <a
+              href="https://getbootstrap.com"
+              target="_blank"
+              title="Bootstrap"
+            >
+              <SiBootstrap className="icon-style" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              title="HTML"
+            >
+              <SiHtml5 className="icon-style" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              title="CSS"
+            >
+              <SiCss3 className="icon-style" />
+            </a>
           </div>
         </div>
       </div>
