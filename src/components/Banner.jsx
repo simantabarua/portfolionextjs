@@ -14,7 +14,7 @@ const Banner = () => {
             <AnimateText />
           </h1>
           <p className="text-xl 2xl:text-2xl font-semibold text-gray-600">
-            Hi, I&pos;m Simanta, Professional Web Developer. Need any help?
+            Hi, I&apos;m Simanta, Professional Web Developer. Need any help?
           </p>
           <div className="flex gap-4">
             <Link href={"#contact"}>
