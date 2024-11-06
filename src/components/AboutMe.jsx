@@ -40,7 +40,7 @@ const AboutMe = () => {
             <div className="mystyle h-20  p-4 w-full  md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
               <p className="font-semibold ">
                 Get a project? Let’s talk. <br />
-                <Link href="#contact">simanta.barua@yahoo.com</Link>
+                <Link href="#contact">simanta.barua1@gmail.com</Link>
               </p>
             </div>
           </div>
