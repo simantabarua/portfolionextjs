@@ -1,5 +1,13 @@
 [
   {
+    "projectName": "Jive",
+    "projectDescription": "A user-friendly website that allows users to book dance classes by various instructors..",
+    "githubLink": "https://github.com/simantabarua/jive-client",
+    "liveSiteLink": "https://jive-live.web.app/",
+    "image": "https://i.ibb.co/QjtMj8q/Jive-min.png",
+    "technologies": ["React", "React Router", "Tailwind CSS", "Node JS", "Express JS", "MongoDB", "Firebase Context API", "React Query", "Axios", "React Hook Form",  "JWT Token"]
+  },
+  {
     "projectName": "PIXIEPIA",
     "projectDescription": "A Full-stack responsive toy marketplace ",
     "githubLink": "https://github.com/simantabarua/pixiepia-toy-marketplace-client",
@@ -14,17 +22,9 @@
     "liveSiteLink": "https://cuisine-route.web.app/",
     "image": "https://i.ibb.co/B2fqSQ9/cuisine-route-min.png",
     "technologies": ["React", "React Router", "Tailwind CSS", "Node JS", "Express JS", "MongoDB", "Firebase Authentication", "Context API" , "React Hook Form"
-
 ]
   },
-  {
-    "projectName": "Jive",
-    "projectDescription": "A user-friendly website that allows users to book dance classes by various instructors..",
-    "githubLink": "https://github.com/simantabarua/jive-client",
-    "liveSiteLink": "https://jive-live.web.app/",
-    "image": "https://i.ibb.co/QjtMj8q/Jive-min.png",
-    "technologies": ["React", "React Router", "Tailwind CSS", "Node JS", "Express JS", "MongoDB", "Firebase Context API", "React Query", "Axios", "React Hook Form",  "JWT Token"]
-  },
+
   {
     "projectName": "Tevliy",
     "projectDescription": "A sustainable travel booking platform that promotes eco-friendly travel options..",

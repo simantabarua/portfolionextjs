@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import AnimateText from "./AnimateText";
+import Image from "next/image";
 const Banner = () => {
   return (
     <div className=" lg:h-[80vh] p-4 rounded-b-[40px]  banner flex flex-col-reverse lg:flex-row justify-between items-center px-4 md:px-14 lg:px-20 lg:gap-12">
@@ -14,7 +15,7 @@ const Banner = () => {
             <AnimateText />
           </h1>
           <p className="text-xl 2xl:text-2xl font-semibold text-gray-600">
-            Hi, I&pos;m Simanta, Professional Web Developer. Need any help?
+            I{"'"}m Simanta, Professional Web Developer. Need any help?
           </p>
           <div className="flex gap-4">
             <Link href={"#contact"}>
@@ -23,8 +24,9 @@ const Banner = () => {
               </button>
             </Link>
             <Link
+              target="_blank"
               href={
-                "https://drive.google.com/file/d/1rdxOibH09GP54-yN2o5A5mVQESAMUy-v/view?usp=drive_link"
+                "https://drive.google.com/file/d/1zo9LbttL28RDuu0po8iiKjVXwqKo8fza/view?usp=sharing"
               }
             >
               <button className=" btn-primary mt-2 md:mt-4 w-36 h-12 md:w-64 md:h-16 font-bold text-gray-800 border-2 border-gray-500 transition-all   duration-300 ease-in-out">
@@ -36,10 +38,12 @@ const Banner = () => {
       </div>
       <div>
         <div className="my-img max-w-md min-h-md lg:w-96">
-          <img
+          <Image
             className="rounded-full w-full p-2 grayscale transition duration-300 hover:grayscale-0 cursor-pointer"
             src="https://i.ibb.co/FHkVf9N/simanta-1.jpg"
             alt="Simanta Image"
+            width={100}
+            height={100}
           />
         </div>
         <div className="flex gap-4 justify-center items-center my-4 md:my-6">

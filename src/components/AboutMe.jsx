@@ -18,7 +18,7 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
             <SectionHeader title={"Who Am i"} />
-            <p className="text-xl font-semibold text-gray-600  md:my-4">
+            <p className="text-xl font-semibold text-gray-600  md:mb-4">
               I&apos;m Experienced MERN stack developer with a passion for
               crafting efficient and user-friendly web applications. Skilled in
               MongoDB, Express.js, React, and Node.js, I thrive on solving
@@ -46,7 +46,7 @@ const AboutMe = () => {
           </div>
         </div>
         <div>
-          <div >
+          <div>
             <SectionHeader title={"Specialized In"} />
           </div>
           <div className="flex justify-between flex-wrap gap-4 my-2 md:my-6">
