@@ -55,7 +55,7 @@ const Experience: React.FC = () => {
 
         <div className="space-y-10 md:space-y-12">
           {experienceData.map((exp, index) => (
-            <div key={index} className=" mystyle rounded-2xl shadow-md p-4">
+            <div className=" mystyle rounded-2xl shadow-md p-4" key={index}>
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div className="mb-2 md:mb-0">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-1">
