@@ -1,6 +1,7 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Titillium_Web, Roboto } from "next/font/google";
+import { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 const wave = Titillium_Web({
   weight: ["300", "400", "600", "700", "900"],
@@ -12,11 +13,15 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Simanta Barua",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="scroll-smooth">
       <body

@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 import { FaBicycle, FaBookReader, FaCode } from "react-icons/fa";
 import { MdPets } from "react-icons/md";
-const Activity = () => {
+const Activity: React.FC = () => {
   return (
     <div className=" lg:h-[620px] p-4 mystyle  my-8  px-4 md:px-14 lg:px-20 ">
       <div className="text-center">

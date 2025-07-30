@@ -14,8 +14,8 @@ console.log(`
                                                                                   
 `)
 
-const Footer = () => {
-  const backToTop = () => {
+const Footer: React.FC = () => {
+  const backToTop = (): void => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };

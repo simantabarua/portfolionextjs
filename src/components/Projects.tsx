@@ -2,16 +2,25 @@
 import React, { useState, useEffect } from "react";
 import SectionHeader from "./SectionHeader";
 
-const Projects = () => {
-  const [projectsData, setProjectsData] = useState([]);
-  const [showAllProjects, setShowAllProjects] = useState(false);
+interface Project {
+  image: string;
+  projectName: string;
+  projectDescription: string;
+  githubLink: string;
+  liveSiteLink: string;
+  technologies: string[];
+}
 
-  const fetchProjects = async () => {
+const Projects: React.FC = () => {
+  const [projectsData, setProjectsData] = useState<Project[]>([]);
+  const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
+
+  const fetchProjects = async (): Promise<void> => {
     const res = await fetch("project.json");
     if (!res.ok) {
       throw new Error("failed to fetch data");
     }
-    const data = await res.json();
+    const data: Project[] = await res.json();
     setProjectsData(data);
   };
 
@@ -19,7 +28,7 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  const renderProject = (project, index) => (
+  const renderProject = (project: Project, index: number): JSX.Element => (
     <div key={index} className="h-full w-full mystyle">
       <div className="h-full flex flex-col">
         <div>
@@ -54,7 +63,7 @@ const Projects = () => {
             </a>
           </div>
           <div className="flex mt-4 flex-wrap gap-2">
-            {project.technologies.map((technology, index) => (
+            {project.technologies.map((technology: string, index: number) => (
               <span
                 key={index}
                 className="mr-2 bg-gray-200 px-2 py-1 rounded-lg text-sm text-gray-700"
@@ -69,7 +78,7 @@ const Projects = () => {
   );
 
 
-  const toggleShowAllProjects = () => {
+  const toggleShowAllProjects = (): void => {
     setShowAllProjects(!showAllProjects);
   };
 

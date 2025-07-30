@@ -3,7 +3,8 @@ import React from "react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import AnimateText from "./AnimateText";
 import Image from "next/image";
-const Banner = () => {
+
+const Banner: React.FC = () => {
   return (
     <div className=" lg:h-[80vh] p-4 rounded-b-[40px]  banner flex flex-col-reverse lg:flex-row justify-between items-center px-4 md:px-14 lg:px-20 lg:gap-12">
       <div className=" lg:flex-1 p-2 md:p-10 flex  justify-center flex-col  ">

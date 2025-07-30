@@ -6,27 +6,37 @@ import emailjs from "@emailjs/browser";
 import SectionHeader from "./SectionHeader";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Contact = () => {
-  const [isMessageSend, setIsMessageSend] = useState(false);
-  const [isSending, setIsSending] = useState(false);
-  const [emailError, setEmailError] = useState("");
-  const [captchaValue, setCaptchaValue] = useState(null);
-  const [captchaError, setCaptchaError] = useState("");
-  const form = useRef();
+interface FormData {
+  user_name: HTMLInputElement;
+  user_email: HTMLInputElement;
+  message: HTMLTextAreaElement;
+}
 
-  function onChange(value) {
+const Contact: React.FC = () => {
+  const [isMessageSend, setIsMessageSend] = useState<boolean>(false);
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [emailError, setEmailError] = useState<string>("");
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const [captchaError, setCaptchaError] = useState<string>("");
+  const form = useRef<HTMLFormElement>(null);
+
+  function onChange(value: string | null): void {
     setCaptchaValue(value);
     setCaptchaError("");
   }
 
-  const validateEmail = (email) => {
+  const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    const email = form.current.user_email.value;
+    if (!form.current) return;
+    
+    const formData = form.current as HTMLFormElement & FormData;
+    const email = formData.user_email.value;
+    
     if (!validateEmail(email)) {
       setEmailError("Invalid email address");
       return;
@@ -51,7 +61,7 @@ const Contact = () => {
         (result) => {
           setIsMessageSend(true);
           setIsSending(false);
-          form.current.reset();
+          form.current?.reset();
           setCaptchaValue(null);
         },
         (error) => {

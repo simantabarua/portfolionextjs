@@ -3,16 +3,17 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { HiXMark, HiOutlineBars3CenterLeft } from "react-icons/hi2";
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (): void => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const menuItems = [
     { id: "#home", name: "Home" },
     { id: "#about", name: "About" },
+    { id: "#experience", name: "Experience" },
     { id: "#project", name: "Portfolio" },
     { id: "#contact", name: "Contact" },
   ];

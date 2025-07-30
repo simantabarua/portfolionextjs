@@ -11,7 +11,7 @@ import {
 import SectionHeader from "./SectionHeader";
 import Link from "next/link";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
     <div id="about" className=" mt-8 mystyle h-full p-4 md:p-12 ">
       <div className=" max-w-7xl mx-auto my-10 ">
