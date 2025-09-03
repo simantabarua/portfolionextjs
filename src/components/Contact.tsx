@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import SectionHeader from "./SectionHeader";
@@ -18,7 +17,26 @@ const Contact: React.FC = () => {
   const [emailError, setEmailError] = useState<string>("");
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [captchaError, setCaptchaError] = useState<string>("");
+  const [captchaSize, setCaptchaSize] = useState<"normal" | "compact">(
+    "normal"
+  );
   const form = useRef<HTMLFormElement>(null);
+
+  // Handle responsive CAPTCHA size
+  useEffect(() => {
+    const handleResize = () => {
+      setCaptchaSize(window.innerWidth < 640 ? "compact" : "normal");
+    };
+
+    // Set initial size
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function onChange(value: string | null): void {
     setCaptchaValue(value);
@@ -33,22 +51,20 @@ const Contact: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (!form.current) return;
-    
+
     const formData = form.current as HTMLFormElement & FormData;
     const email = formData.user_email.value;
-    
+
     if (!validateEmail(email)) {
       setEmailError("Invalid email address");
       return;
     } else {
       setEmailError("");
     }
-
     if (!captchaValue) {
       setCaptchaError("Please complete the CAPTCHA");
       return;
     }
-
     setIsSending(true);
     emailjs
       .sendForm(
@@ -65,7 +81,6 @@ const Contact: React.FC = () => {
           setCaptchaValue(null);
         },
         (error) => {
-          // console.log(error.text);
           setIsSending(false);
         }
       );
@@ -108,13 +123,10 @@ const Contact: React.FC = () => {
                 Message sent
               </p>
             )}
-            <div>
-              <ReCAPTCHA
-                sitekey="6LfTs-YpAAAAAPrdJ3olu_JOU8z9pbqiTUCu9Exr"
-                onChange={onChange}
-              />
-              {captchaError && <p className="text-red-500">{captchaError}</p>}
+            <div className="flex justify-center sm:justify-start">
+            
             </div>
+            {captchaError && <p className="text-red-500">{captchaError}</p>}
             <button
               type="submit"
               value="Send"

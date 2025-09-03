@@ -23,12 +23,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
-        className={`bg-[#e0e0e0] px-4 m-4 w-full max-w-[106rem] mx-auto  ${wave.className}`}
+        className={`bg-[#e0e0e0] w-full container mx-auto ${wave.className}`}
       >
-        <Navbar />
-        {children}
+        <main className="px-2 m-2 md:m-4 md:px-4">
+          <Navbar />
+
+          {children}
+        </main>
       </body>
     </html>
   );

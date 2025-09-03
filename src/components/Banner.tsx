@@ -18,9 +18,9 @@ const Banner: React.FC = () => {
           <p className="text-xl 2xl:text-2xl font-semibold text-gray-600">
             I{"'"}m Simanta, Professional Web Developer. Need any help?
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <Link href={"#contact"}>
-              <button className="btn-primary mt-2 md:mt-4 w-32 h-12 md:w-64 md:h-16 font-bold text-gray-800 border-2 border-gray-500 transition-all   duration-300 ease-in-out">
+              <button className="btn-primary mt-2 md:mt-4 w-full h-12 md:w-64 md:h-16 font-bold text-gray-800 border-2 border-gray-500 transition-all   duration-300 ease-in-out">
                 Hire me
               </button>
             </Link>
@@ -30,7 +30,7 @@ const Banner: React.FC = () => {
                 "https://drive.google.com/file/d/1zo9LbttL28RDuu0po8iiKjVXwqKo8fza/view?usp=sharing"
               }
             >
-              <button className=" btn-primary mt-2 md:mt-4 w-36 h-12 md:w-64 md:h-16 font-bold text-gray-800 border-2 border-gray-500 transition-all   duration-300 ease-in-out">
+              <button className=" btn-primary mt-2 md:mt-4 w-full h-12 md:w-64 md:h-16 font-bold text-gray-800 border-2 border-gray-500 transition-all   duration-300 ease-in-out">
                 View Resume
               </button>
             </Link>

@@ -7,17 +7,17 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
-    <main>
+    <>
       <Banner />
       <AboutMe />
       <Experience />
       <Projects />
-      <Contact />
-      {/* <Certification/> */}
       <Activity />
+      <Certification />
+      <Contact />
       <Footer />
-    </main>
+    </>
   );
 }
