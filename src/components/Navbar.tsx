@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { HiXMark, HiOutlineBars3CenterLeft } from "react-icons/hi2";
+import { DarkModeToggle } from "./dark-mode-toggle";
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -11,16 +12,16 @@ const Navbar: React.FC = () => {
   };
 
   const menuItems = [
-    { id: "#home", name: "Home" },
     { id: "#about", name: "About" },
     { id: "#experience", name: "Experience" },
     { id: "#project", name: "Portfolio" },
     { id: "#contact", name: "Contact" },
+    { id: "/blog", name: "Blog" },
   ];
 
   return (
-    <div className="p-4 md:p-6 rounded-t-[40px] navbar">
-      <div className="flex items-center justify-between h-12 max-w-7xl mx-auto px-2">
+    <div className="p-4 md:p-6 rounded-t-[40px] navbar container mx-auto ">
+      <div className="flex items-center justify-between h-12 px-2">
         {/* Logo + Hamburger */}
         <div className="flex items-center gap-2">
           <button
@@ -33,10 +34,12 @@ const Navbar: React.FC = () => {
               <HiOutlineBars3CenterLeft className="w-6 h-6" />
             )}
           </button>
-          <h2 className="text-xl sm:text-2xl font-bold">
-            <span className="animate-pulse">&lt;</span>Simanta
-            <span className="animate-pulse">/&gt;</span>
-          </h2>
+          <Link href="/">
+            <span className="text-xl sm:text-2xl font-bold">
+              <span className="animate-pulse">&lt;</span>Simanta
+              <span className="animate-pulse">/&gt;</span>
+            </span>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -50,6 +53,7 @@ const Navbar: React.FC = () => {
               {item.name}
             </Link>
           ))}
+          <DarkModeToggle />
         </div>
       </div>
 

@@ -1,0 +1,262 @@
+{
+  "projects": [
+    {
+      "id": "ride-nest",
+      "projectName": "Ride Nest",
+      "projectDescription": "A user-friendly website that allows users to book dance classes by various instructors.",
+      "githubLink": "https://github.com/simantabarua/ridenest-client",
+      "liveSiteLink": "https://ridenest-dev.web.app",
+      "image": "https://i.ibb.co/QjtMj8q/Jive-min.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Node JS",
+        "Express JS",
+        "MongoDB",
+        "Firebase Context API",
+        "React Query",
+        "Axios",
+        "React Hook Form",
+        "JWT Token"
+      ],
+      "features": [
+        "Book dance classes online",
+        "Instructor profiles",
+        "Stripe payment integration",
+        "User dashboard",
+        "Responsive design"
+      ]
+    },
+    {
+      "id": "jive",
+      "projectName": "Jive",
+      "projectDescription": "A user-friendly website that allows users to book dance classes by various instructors.",
+      "githubLink": "https://github.com/simantabarua/jive-client",
+      "liveSiteLink": "https://jive-live.web.app/",
+      "image": "https://i.ibb.co/QjtMj8q/Jive-min.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Node JS",
+        "Express JS",
+        "MongoDB",
+        "Firebase Context API",
+        "React Query",
+        "Axios",
+        "React Hook Form",
+        "JWT Token"
+      ],
+      "features": [
+        "Class booking system",
+        "Instructor management",
+        "Payment gateway",
+        "User authentication",
+        "Dashboard analytics"
+      ]
+    },
+    {
+      "id": "pixiepia",
+      "projectName": "PIXIEPIA",
+      "projectDescription": "A Full-stack responsive toy marketplace",
+      "githubLink": "https://github.com/simantabarua/pixiepia-toy-marketplace-client",
+      "liveSiteLink": "https://pixie-pia.web.app/",
+      "image": "https://i.ibb.co/q94Rv89/pixie-pia-web-app-min.png",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "React Router",
+        "React Hook Form",
+        "Express JS",
+        "MongoDB",
+        "AOS Animation",
+        "Firebase",
+        "Lottie React"
+      ],
+      "features": [
+        "Toy product listings",
+        "User authentication",
+        "Shopping cart system",
+        "Responsive UI",
+        "Admin dashboard"
+      ]
+    },
+    {
+      "id": "cuisine-route",
+      "projectName": "Cuisine Route",
+      "projectDescription": "A social network for people who are passionate about sustainability.",
+      "githubLink": "https://github.com/simantabarua/cuisine-route",
+      "liveSiteLink": "https://cuisine-route.web.app/",
+      "image": "https://i.ibb.co/B2fqSQ9/cuisine-route-min.png",
+      "technologies": [
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Node JS",
+        "Express JS",
+        "MongoDB",
+        "Firebase Authentication",
+        "Context API",
+        "React Hook Form"
+      ],
+      "features": [
+        "User profiles",
+        "Post sharing",
+        "Comment system",
+        "Like and follow",
+        "Sustainability groups"
+      ]
+    },
+    {
+      "id": "tevliy",
+      "projectName": "Tevliy",
+      "projectDescription": "A sustainable travel booking platform that promotes eco-friendly travel options.",
+      "githubLink": "https://github.com/simantabarua/tevliy",
+      "liveSiteLink": "https://tevily-web.web.app/",
+      "image": "https://i.ibb.co/TLnNPNq/travily-min.png",
+      "technologies": [
+        "ReactJS",
+        "MongoDB",
+        "Firebase",
+        "Bootstrap",
+        "SwiperJs",
+        "Node.js",
+        "CSS",
+        "JavaScript"
+      ],
+      "features": [
+        "Eco-friendly travel options",
+        "Booking system",
+        "User reviews",
+        "Responsive UI",
+        "Admin management"
+      ]
+    },
+    {
+      "id": "hirego",
+      "projectName": "HireGo",
+      "projectDescription": "A Job Searching portal.",
+      "githubLink": "https://github.com/simantabarua/hirego",
+      "liveSiteLink": "https://www.sustainableliving.com",
+      "image": "https://i.ibb.co/2nDWXck/Hire-Go-min.png",
+      "technologies": [
+        "ReactJS",
+        "JSON",
+        "Tailwind CSS",
+        "Recharts",
+        "contextAPI",
+        "React-router-dom",
+        "React-toastify"
+      ],
+      "features": [
+        "Job listings",
+        "Search and filter",
+        "User login",
+        "Application tracking",
+        "Notifications"
+      ]
+    },
+    {
+      "id": "jsxfilegen",
+      "projectName": "Jsxfilegen",
+      "projectDescription": "Bulk JS, JSX, TS, TSX Files Generator",
+      "githubLink": "https://github.com/simantabarua/jsxfile",
+      "liveSiteLink": "https://jsxfilegen.netlify.app/",
+      "image": "https://i.ibb.co/VvJMKnH/JSX-file-generator-min.png",
+      "technologies": ["ReactJS", "Tailwind CSS", "React-router-dom"],
+      "features": [
+        "Generate multiple file types",
+        "Custom templates",
+        "Batch processing",
+        "Download as zip",
+        "User-friendly UI"
+      ]
+    },
+    {
+      "id": "ooty-tea",
+      "projectName": "Ooty Tea",
+      "projectDescription": "A tea Marketplace Website",
+      "githubLink": "https://github.com/simantabarua/oody-tea-client",
+      "liveSiteLink": "https://ooty-tea.web.app/",
+      "image": "https://i.ibb.co/WsYWkyB/Oody-Tea-min.png",
+      "technologies": [
+        "ReactJS",
+        "Material UI",
+        "Node.js",
+        "React-router-dom",
+        "Firebase",
+        "SwiperJs",
+        "MongoDB",
+        "ContextAPI"
+      ],
+      "features": [
+        "Product catalog",
+        "User authentication",
+        "Cart system",
+        "Responsive UI",
+        "Admin dashboard"
+      ]
+    },
+    {
+      "id": "medisafe",
+      "projectName": "Medisafe",
+      "projectDescription": "A medical equipment selling website.",
+      "githubLink": "https://github.com/simantabarua/medisafe",
+      "liveSiteLink": "https://medisafe-1ac3b.web.app/",
+      "image": "https://i.ibb.co/WybywGk/Medisafe-min.png",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "React-Router",
+        "Bootstrap",
+        "Firebase"
+      ],
+      "features": [
+        "Medical product listings",
+        "Search and filter",
+        "User authentication",
+        "Cart & checkout",
+        "Admin dashboard"
+      ]
+    },
+    {
+      "id": "code-school",
+      "projectName": "Code School",
+      "projectDescription": "A Coding teaching platform website.",
+      "githubLink": "https://github.com/simantabarua/code-school",
+      "liveSiteLink": "https://keen-poitras-80abc9.netlify.app/",
+      "image": "https://i.ibb.co/N9MhsPC/Code-School-min.png",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "React-Router",
+        "Bootstrap",
+        "Firebase"
+      ],
+      "features": [
+        "Course catalog",
+        "User authentication",
+        "Admin dashboard",
+        "Student progress tracking",
+        "Responsive UI"
+      ]
+    },
+    {
+      "id": "honda-cbr",
+      "projectName": "Honda CBR",
+      "projectDescription": "A Featured Bikes showcase platform website.",
+      "githubLink": "https://github.com/simantabarua/honda-cbr",
+      "liveSiteLink": "https://tender-hawking-6c398b.netlify.app/",
+      "image": "https://i.ibb.co/j6Tx84m/Honda-CBR-min.png",
+      "technologies": ["Bootstrap", "HTML", "CSS", "JavaScript"],
+      "features": [
+        "Bike showcase",
+        "Product details",
+        "Responsive design",
+        "Gallery",
+        "Contact form"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "blogs": [
+    {
+      "id": 10001,
+      "title": "React Hooks: Mastering useState and useEffect",
+      "category": "React",
+      "author": "Simanta",
+      "date": "2024-01-15",
+      "readTime": "8 min read",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+      "content": "React Hooks revolutionized the way we write React components. In this comprehensive guide, we'll dive deep into the two most fundamental hooks: useState and useEffect. Learn how to manage state and side effects effectively while writing cleaner, more maintainable code.",
+      "tags": ["React", "Hooks", "useState", "useEffect"]
+    },
+    {
+      "id": 10002,
+      "title": "Tailwind CSS: Building Beautiful UIs with Utility-First CSS",
+      "category": "Tailwind",
+      "author": "Simanta",
+      "date": "2024-01-20",
+      "readTime": "12 min read",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop",
+      "content": "Tailwind CSS has transformed the way developers approach styling. Discover how to leverage utility-first CSS to build stunning, responsive interfaces without writing custom CSS. From basic layouts to complex components, master the art of Tailwind CSS.",
+      "tags": ["Tailwind", "CSS", "Utility-First", "Responsive"]
+    },
+    {
+      "id": 10003,
+      "title": "JavaScript ES2024: New Features You Should Know",
+      "category": "JavaScript",
+      "author": "Simanta",
+      "date": "2024-01-25",
+      "readTime": "10 min read",
+      "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&h=400&fit=crop",
+      "content": "JavaScript continues to evolve with exciting new features in ES2024. Explore the latest additions including enhanced array methods, improved async handling, and new syntax that will make your code more expressive and efficient.",
+      "tags": ["JavaScript", "ES2024", "New Features", "Modern JS"]
+    },
+    {
+      "id": 10004,
+      "title": "React Performance Optimization: Advanced Techniques",
+      "category": "React",
+      "author": "Simanta",
+      "date": "2024-02-01",
+      "readTime": "15 min read",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
+      "content": "Take your React applications to the next level with advanced performance optimization techniques. Learn about memoization, code splitting, lazy loading, and other strategies to build lightning-fast React applications that scale.",
+      "tags": ["React", "Performance", "Optimization", "Advanced"]
+    },
+    {
+      "id": 10005,
+      "title": "Tailwind CSS with React: Building Modern Web Apps",
+      "category": "Tailwind",
+      "author": "Simanta",
+      "date": "2024-02-05",
+      "readTime": "11 min read",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+      "content": "Combine the power of React with the flexibility of Tailwind CSS to build modern, responsive web applications. Learn best practices, component patterns, and how to create a consistent design system that scales with your project.",
+      "tags": ["Tailwind", "React", "Web Apps", "Design System"]
+    }
+  ]
+}
