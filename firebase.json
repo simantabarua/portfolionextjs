@@ -1,14 +1,13 @@
 {
-  "hosting": [
-    {
-      "target": "simanta",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    },
-    {
-      "target": "simanta",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
     }
-  ]
+  }
 }
