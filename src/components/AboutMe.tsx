@@ -54,7 +54,7 @@ const AboutMe: React.FC = () => {
             <div className="mystyle h-20 p-1 md:p-4 w-full md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
               <p className="font-semibold text-xs md:text-xl text-primary">
                 Get a project? Let’s talk. <br />
-                <Link style={{ color: "var(--accent)" }} href="#contact">simanta.barua1@gmail.com</Link>
+                <Link style={{ color: "var(--accent)" }} href="/#contact">simanta.barua1@gmail.com</Link>
               </p>
             </div>
           </div>

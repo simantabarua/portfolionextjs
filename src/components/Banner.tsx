@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-col justify-center sm:flex-row gap-4">
-          <Link href="#contact">
+          <Link href="/#contact">
             <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out">
               Hire me
             </button>

@@ -4,7 +4,7 @@ import { blogsData } from "@/data/blogs";
 
 export default function BlogPage() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 h-full min-h-screen pt-10 md:pt-16 mystyle">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 h-full min-h-screen pt-10 md:pt-16 mystyle rounded-t-none">
       {blogsData.map((blog) => (
         <article
           key={blog.id}

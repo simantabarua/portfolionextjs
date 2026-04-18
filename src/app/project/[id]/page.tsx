@@ -43,7 +43,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br mystyle py-12 px-4 sm:px-6">
+    <div className="min-h-screen bg-gradient-to-br mystyle py-12 px-4 sm:px-6 rounded-t-none">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <div className="mb-8 flex justify-center">

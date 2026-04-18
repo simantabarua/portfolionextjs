@@ -12,10 +12,10 @@ const Navbar: React.FC = () => {
   };
 
   const menuItems = [
-    { id: "#about", name: "About" },
-    { id: "#experience", name: "Experience" },
-    { id: "#project", name: "Portfolio" },
-    { id: "#contact", name: "Contact" },
+    { id: "/#about", name: "About" },
+    { id: "/#experience", name: "Experience" },
+    { id: "/#project", name: "Portfolio" },
+    { id: "/#contact", name: "Contact" },
     { id: "/blog", name: "Blog" },
   ];
 
