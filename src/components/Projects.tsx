@@ -1,33 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import Link from "next/link";
-
-interface Project {
-  image: string;
-  projectName: string;
-  projectDescription: string;
-  githubLink: string;
-  liveSiteLink: string;
-  technologies: string[];
-}
+import { projectsData, Project } from "@/data/projects";
 
 const Projects: React.FC = () => {
-  const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
-
-  const fetchProjects = async (): Promise<void> => {
-    const res = await fetch("projects.json");
-    if (!res.ok) {
-      throw new Error("failed to fetch data");
-    }
-    const data = await res.json();
-    setProjectsData(data.projects);
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
 
   const renderProject = (project: Project, index: number) => (
     <div key={index} className="h-full w-full mystyle">
@@ -61,7 +39,7 @@ const Projects: React.FC = () => {
               Live Site
             </Link>
             <Link
-              href={`/project/${project.projectName.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/project/${project.id}`}
               className="text-blue-500 font-bold hover:text-blue-700"
             >
               Project Details

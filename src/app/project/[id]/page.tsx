@@ -1,88 +1,24 @@
-"use client";
-import React, { useState, useEffect, use } from "react";
+import React from "react";
 import Link from "next/link";
+import { projectsData } from "@/data/projects";
 
-interface Project {
-  id: string;
-  projectName: string;
-  projectDescription: string;
-  githubLink: string;
-  liveSiteLink: string;
-  image: string;
-  technologies: string[];
-  features: string[];
+export async function generateStaticParams() {
+  return projectsData.map((project) => ({
+    id: project.id,
+  }));
 }
 
 interface ProjectPageProps {
   params: Promise<{ id: string }>;
 }
 
-export default function ProjectDetailPage({ params }: ProjectPageProps) {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export default async function ProjectDetailPage({ params }: ProjectPageProps) {
+  // Await the params Promise
+  const { id } = await params;
 
-  // Unwrap the params Promise with React.use()
-  const { id } = use(params);
-
-  const fetchProjects = async (): Promise<void> => {
-    try {
-      const res = await fetch("/projects.json");
-
-      if (!res.ok) {
-        throw new Error(
-          `Failed to fetch data: ${res.status} ${res.statusText}`
-        );
-      }
-
-      const data = await res.json();
-      setProjects(data.projects);
-    } catch (err) {
-      console.error("Error fetching projects:", err);
-      setError(
-        err instanceof Error ? err.message : "An unknown error occurred"
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen mystyle flex items-center justify-center bg-gradient-to-br mystyle">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading project details...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br mystyle">
-        <div className=" mystyle p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-          <div className="text-red-500 text-5xl mb-4">⚠️</div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Error Loading Project
-          </h2>
-          <p className="text-gray-600 mb-6">{error}</p>
-          <Link
-            href="/#project"
-            className="inline-block px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition"
-          >
-            Back to Projects
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  const project = projects.find((p) => p.id.toLowerCase() === id.toLowerCase());
+  const project = projectsData.find(
+    (p) => p.id.toLowerCase() === id.toLowerCase()
+  );
 
   if (!project) {
     return (

@@ -1,40 +1,11 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-
-interface Blog {
-  id: string;
-  title: string;
-  content: string;
-  image: string;
-  category: string;
-  author: string;
-  readTime: string;
-  date: string;
-  tags: string[];
-}
+import { blogsData } from "@/data/blogs";
 
 export default function BlogPage() {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-
-  const fetchBlogs = async (): Promise<void> => {
-    try {
-      const res = await fetch("blogs.json");
-      if (!res.ok) throw new Error("Failed to fetch blogs");
-      const data = await res.json();
-      setBlogs(data.blogs);
-    } catch (error) {
-      console.error("Error fetching blogs:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  p-4 h-full min-h-screen pt-10 md:pt-16 mystyle">
-      {blogs.map((blog) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 h-full min-h-screen pt-10 md:pt-16 mystyle">
+      {blogsData.map((blog) => (
         <article
           key={blog.id}
           className="rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl"
