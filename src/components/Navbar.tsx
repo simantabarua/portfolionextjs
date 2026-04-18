@@ -27,6 +27,7 @@ const Navbar: React.FC = () => {
           <button
             className="md:hidden btn-primary p-2 flex items-center justify-center"
             onClick={toggleMobileMenu}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? (
               <HiXMark className="w-6 h-6" />

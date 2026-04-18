@@ -13,7 +13,7 @@ export const projectsData: Project[] = [
   {
     id: "ride-nest",
     projectName: "Ride Nest",
-    projectDescription: "A user-friendly website that allows users to book dance classes by various instructors.",
+    projectDescription: "A fully custom web application for dance class bookings, featuring a scalable frontend architecture and Stripe payment integration for enterprise-level reliability.",
     githubLink: "https://github.com/simantabarua/ridenest-client",
     liveSiteLink: "https://ridenest-dev.web.app",
     image: "https://i.ibb.co.com/qM9NHxXP/Screenshot-2025-11-11-at-12-34-55-Ride-Nest.png",
@@ -41,7 +41,7 @@ export const projectsData: Project[] = [
   {
     id: "jive",
     projectName: "Jive",
-    projectDescription: "A user-friendly website that allows users to book dance classes by various instructors.",
+    projectDescription: "A robust SaaS booking platform designed with scalable Next.js and MERN stack principles, empowering users to securely book classes with verified instructors.",
     githubLink: "https://github.com/simantabarua/jive-client",
     liveSiteLink: "https://jive-live.web.app/",
     image: "https://i.ibb.co/QjtMj8q/Jive-min.png",
@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
   {
     id: "pixiepia",
     projectName: "PIXIEPIA",
-    projectDescription: "A Full-stack responsive toy marketplace",
+    projectDescription: "An advanced, SEO-optimized Full-stack responsive toy marketplace providing a seamless modern web application experience.",
     githubLink: "https://github.com/simantabarua/pixiepia-toy-marketplace-client",
     liveSiteLink: "https://pixie-pia.web.app/",
     image: "https://i.ibb.co/q94Rv89/pixie-pia-web-app-min.png",
@@ -95,7 +95,7 @@ export const projectsData: Project[] = [
   {
     id: "cuisine-route",
     projectName: "Cuisine Route",
-    projectDescription: "A social network for people who are passionate about sustainability.",
+    projectDescription: "A scalable, high-performance social networking web application designed for sustainability advocates, featuring real-time MERN stack capabilities.",
     githubLink: "https://github.com/simantabarua/cuisine-route",
     liveSiteLink: "https://cuisine-route.web.app/",
     image: "https://i.ibb.co/B2fqSQ9/cuisine-route-min.png",

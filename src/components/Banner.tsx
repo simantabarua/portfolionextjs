@@ -14,11 +14,12 @@ const Banner: React.FC = () => {
             Hello,
           </p>
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-semibold my-text leading-tight">
+            <span className="sr-only">Simanta Barua - Full Stack React Developer</span>
             <AnimateText />
           </h1>
-          <p className="text-lg md:text-xl font-medium text-secondary">
-            I{"'"}m Simanta, a Professional Web Developer. Need any help?
-          </p>
+          <h2 className="text-lg md:text-xl font-medium text-secondary leading-relaxed">
+            I{"'"}m Simanta, an expert Next.js & MERN Stack Developer. specializing in SEO-optimized, <strong className="font-bold text-primary">Custom Web Application Development</strong> and Enterprise Solutions.
+          </h2>
         </div>
 
         {/* Buttons */}

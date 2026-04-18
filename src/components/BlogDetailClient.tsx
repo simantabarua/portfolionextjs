@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import { 
   BsArrowLeft, 
@@ -14,25 +15,8 @@ import {
   BsLinkedin,
 } from "react-icons/bs";
 
-interface Author {
-  name: string;
-  role: string;
-  avatar: string;
-}
-
-interface Blog {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt: string;
-  category: string;
-  author: Author;
-  date: string;
-  readTime: string;
-  image: string;
-  content: string;
-  tags: string[];
-}
+import { Blog } from "@/types";
+import { DataService } from "@/lib/services";
 
 export default function BlogDetailClient({ id }: { id: string }) {
   const [blog, setBlog] = useState<Blog | null>(null);
@@ -42,16 +26,13 @@ export default function BlogDetailClient({ id }: { id: string }) {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch("/data/blogs.json");
-        if (response.ok) {
-          const allBlogs = await response.json();
-          const data = allBlogs.find((b: Blog) => b.id === parseInt(id));
-          
-          if (data) {
-            setBlog(data);
-            // Get related blogs from same category
-            setRelatedBlogs(allBlogs.filter((b: Blog) => b.category === data.category && b.id !== data.id).slice(0, 3));
-          }
+        const data = await DataService.getBlogById(id);
+        
+        if (data) {
+          setBlog(data);
+          // Get related blogs from same category
+          const allBlogs = await DataService.getBlogs();
+          setRelatedBlogs(allBlogs.filter((b) => b.category === data.category && b.id.toString() !== data.id.toString()).slice(0, 3));
         }
       } catch (error) {
         console.error("Error fetching blog:", error);
@@ -119,8 +100,8 @@ export default function BlogDetailClient({ id }: { id: string }) {
           {/* Author & Metadata */}
           <div className="flex flex-col items-center gap-6 py-6 border-y border-gray-300/10">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full mystyle p-1 overflow-hidden">
-                <img src={blog.author.avatar} alt={blog.author.name} className="w-full h-full rounded-full object-cover" />
+              <div className="w-12 h-12 rounded-full mystyle p-1 overflow-hidden relative">
+                <Image src={blog.author.avatar} alt={blog.author.name} fill className="rounded-full object-cover" />
               </div>
               <div className="text-left">
                 <h4 className="font-bold text-primary">{blog.author.name}</h4>
@@ -143,10 +124,11 @@ export default function BlogDetailClient({ id }: { id: string }) {
 
         {/* Featured Image */}
         <div className="mystyle p-3 rounded-[40px] mt-12 mb-16 shadow-2xl overflow-hidden aspect-video relative group">
-          <img
+          <Image
             src={blog.image}
             alt={blog.title}
-            className="w-full h-full object-cover rounded-[30px] transition-transform duration-1000 group-hover:scale-105"
+            fill
+            className="object-cover rounded-[30px] transition-transform duration-1000 group-hover:scale-105"
           />
         </div>
 
@@ -188,8 +170,8 @@ export default function BlogDetailClient({ id }: { id: string }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedBlogs.map((b) => (
                 <Link key={b.id} href={`/blog/${b.id}`} className="mystyle p-4 rounded-[30px] group block transition-all hover:-translate-y-2">
-                  <div className="aspect-video rounded-[20px] overflow-hidden mb-4">
-                    <img src={b.image} alt={b.title} className="w-full h-full object-cover" />
+                  <div className="aspect-video rounded-[20px] overflow-hidden mb-4 relative">
+                    <Image src={b.image} alt={b.title} fill className="object-cover" />
                   </div>
                   <h4 className="font-bold text-primary group-hover:text-accent leading-tight line-clamp-2">
                     {b.title}

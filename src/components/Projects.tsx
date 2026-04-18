@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import Link from "next/link";
 import { projectsData, Project } from "@/data/projects";
+import Image from "next/image";
 
 const Projects: React.FC = () => {
   const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
@@ -11,12 +12,12 @@ const Projects: React.FC = () => {
     <div key={index} className="h-full w-full mystyle">
       <div className="h-full flex flex-col">
         <div>
-          <div className="card-img h-64">
-            <img
+          <div className="card-img h-64 relative">
+            <Image
               src={project.image}
-              alt="Project Image"
-              className="object-cover w-full rounded-t-3xl"
-              loading="lazy"
+              alt={project.projectName}
+              fill
+              className="object-cover rounded-t-3xl"
             />
           </div>
         </div>

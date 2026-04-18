@@ -241,5 +241,73 @@ export const blogsData: Blog[] = [
     image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1000&auto=format&fit=crop",
     content: "Design is not just about how it looks; it's about how it works and how it feels to the user. By tapping into psychological principles, we can guide user behavior and reduce friction.\n\nFrom Hicks's Law to the Zeigarnik effect, we'll explore the scientific foundations of great UX and how to apply them to your next project without manipulative dark patterns.",
     tags: ["UX Design", "Psychology", "Product Strategy"]
+  },
+  {
+    id: 14,
+    title: "Why Next.js is the Future of Enterprise Web Development in 2026",
+    slug: "nextjs-future-enterprise-web-development-2026",
+    excerpt: "An architectural analysis of why enterprise teams are migrating to Next.js for custom web application development.",
+    category: "Development",
+    author: {
+      name: "Simanta Barua",
+      role: "SEO Optimized Web Developer",
+      avatar: "https://i.ibb.co/FHkVf9N/simanta-1.jpg"
+    },
+    date: "2026-04-18",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+    content: "When tackling enterprise web development, scalability and SEO are non-negotiable. Traditional React SPAs struggle with indexability and initial load times. Enter Next.js.\n\nNext.js provides Server-Side Rendering (SSR) and Static Site Generation (SSG) out of the box. By leveraging the App Router and React Server Components, Next.js experts can ship less JavaScript to the client, drastically improving Time to Interactive (TTI). For any custom web application development agency, Next.js is now the undisputed baseline.",
+    tags: ["Next.js", "Enterprise Web Development", "React Developer"]
+  },
+  {
+    id: 15,
+    title: "Building Scalable Progressive Web Apps (PWAs) with React",
+    slug: "building-scalable-pwa-react",
+    excerpt: "How to engineer cross-platform offline experiences using React and service workers.",
+    category: "Development",
+    author: {
+      name: "Simanta Barua",
+      role: "PWA Developer",
+      avatar: "https://i.ibb.co/FHkVf9N/simanta-1.jpg"
+    },
+    date: "2026-04-20",
+    readTime: "10 min",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+    content: "Progressive Web Apps bridge the gap between web applications and native mobile apps. As a React developer, understanding PWA architecture allows you to deliver offline-capable, installable applications without the overhead of app store deployment.\n\nKey strategies involve utilizing the Web App Manifest, implementing a robust Service Worker for caching API responses, and handling background sync. This guide breaks down the core tenets of modern PWA development.",
+    tags: ["React", "PWA Developer", "Scalable Web Apps"]
+  },
+  {
+    id: 16,
+    title: "Optimizing Core Web Vitals in Custom MERN Stack Applications",
+    slug: "optimizing-core-web-vitals-mern-stack",
+    excerpt: "A deep dive into fixing LCP, FID, and CLS scores in complex React/Node architectures.",
+    category: "Development",
+    author: {
+      name: "Simanta Barua",
+      role: "MERN Stack Developer",
+      avatar: "https://i.ibb.co/FHkVf9N/simanta-1.jpg"
+    },
+    date: "2026-04-25",
+    readTime: "12 min",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop",
+    content: "Google's Core Web Vitals drastically influence your search engine ranking. In a traditional MERN stack application, achieving a perfect score requires meticulous architecture.\n\nWe must aggressively optimize our Largest Contentful Paint (LCP) through CDN image delivery and lazy loading. Cumulative Layout Shift (CLS) can be mitigated by strictly defining dimensions for dynamic content. As a MERN stack developer, your responsibility extends beyond the backend API into how rapidly the frontend parses JSON payloads.",
+    tags: ["MERN Stack", "Core Web Vitals", "Performance Optimization"]
+  },
+  {
+    id: 17,
+    title: "A Technical Guide to SEO-Optimized Web Applications",
+    slug: "seo-optimized-web-applications-guide",
+    excerpt: "How to weave JSON-LD schema, dynamic open graph tags, and semantic HTML into modern JS frameworks.",
+    category: "Development",
+    author: {
+      name: "Simanta Barua",
+      role: "SEO Optimized Web Developer",
+      avatar: "https://i.ibb.co/FHkVf9N/simanta-1.jpg"
+    },
+    date: "2026-05-01",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+    content: "Building custom web applications often involves heavy JavaScript dependencies that historically hurt SEO. To combat this, modern software engineering requires a proactive SEO strategy.\n\nThis involves injecting JSON-LD schema directly into the DOM tree to define precise entities (like Article, Organization, or Person). We also utilize dynamic OpenGraph image generation. When you hire a web developer today, their understanding of semantic structure is just as critical as their logic capacity.",
+    tags: ["SEO", "Custom Web Application", "Web Development Services"]
   }
 ];

@@ -2,22 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import { BsArrowRight, BsCalendar, BsClock } from "react-icons/bs";
 
-interface Blog {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-}
-
-const categories = ["All", "Development", "Design", "Product", "Career"];
+import { Blog } from "@/types";
+import { DataService } from "@/lib/services";
+import { BLOG_CATEGORIES } from "@/lib/constants";
 
 export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -28,8 +19,7 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("/data/blogs.json");
-        const data = await response.json();
+        const data = await DataService.getBlogs();
         setBlogs(data);
         setFilteredBlogs(data);
       } catch (error) {
@@ -71,7 +61,7 @@ export default function BlogPage() {
 
       {/* Category Pills */}
       <div className="flex flex-wrap justify-center gap-4">
-        {categories.map((cat) => (
+        {BLOG_CATEGORIES.map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
@@ -90,11 +80,12 @@ export default function BlogPage() {
       {selectedCategory === "All" && featuredBlog && (
         <section className="mystyle p-4 md:p-8 rounded-[40px] overflow-hidden group">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
-            <div className="w-full lg:w-1/2 aspect-video rounded-[30px] overflow-hidden">
-              <img
+            <div className="w-full lg:w-1/2 aspect-video rounded-[30px] overflow-hidden relative">
+              <Image
                 src={featuredBlog.image}
                 alt={featuredBlog.title}
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
             </div>
             <div className="w-full lg:w-1/2 space-y-6 p-4">
@@ -137,10 +128,11 @@ export default function BlogPage() {
             className="mystyle p-6 rounded-[40px] flex flex-col group h-full"
           >
             <div className="relative aspect-video rounded-[24px] overflow-hidden mb-6">
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute top-4 left-4">
                 <span className="tech-badge text-xs px-3 py-1 bg-black/5 backdrop-blur-sm border-none shadow-none">

@@ -5,6 +5,8 @@ import SectionHeader from "@/components/SectionHeader";
 import { BsGithub, BsGlobe, BsArrowLeft, BsSearch } from "react-icons/bs";
 import { HiOutlineLightBulb, HiOutlineCodeBracket } from "react-icons/hi2";
 
+import { DataService } from "@/lib/services";
+
 export async function generateStaticParams() {
   return projectsData.map((project) => ({
     id: project.id,
@@ -17,10 +19,7 @@ interface ProjectPageProps {
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const { id } = await params;
-
-  const project = projectsData.find(
-    (p) => p.id.toLowerCase() === id.toLowerCase()
-  );
+  const project = await DataService.getProjectById(id);
 
   if (!project) {
     return (
