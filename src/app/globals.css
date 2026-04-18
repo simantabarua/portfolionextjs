@@ -185,7 +185,7 @@ body {
 
   .tech-badge {
     @apply px-2 py-1 rounded-lg text-sm font-medium transition-colors duration-300;
-    background: var(--inset-shadow-dark);
+    background: var(--bg-primary);
     color: var(--text-primary);
     box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
   }

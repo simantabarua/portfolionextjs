@@ -61,7 +61,7 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen pt-10 md:pt-16 px-4 md:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="min-h-screen pt-4 md:pt-6 px-4 md:px-8 max-w-7xl mx-auto space-y-6">
       <div className="text-center">
         <SectionHeader title="Inside the Code & Beyond" />
         <p className="text-secondary text-lg md:text-xl max-w-2xl mx-auto mt-4">

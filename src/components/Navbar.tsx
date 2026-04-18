@@ -43,16 +43,18 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-4">
-          {menuItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.id}
-              className="scroll-smooth font-semibold px-3 py-2 h-10 nav-link"
-            >
-              {item.name}
-            </Link>
-          ))}
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex gap-4">
+            {menuItems.map((item, index) => (
+              <Link
+                key={index}
+                href={item.id}
+                className="scroll-smooth font-semibold px-3 py-2 h-10 nav-link"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
           <DarkModeToggle />
         </div>
       </div>

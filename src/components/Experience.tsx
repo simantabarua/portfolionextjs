@@ -22,7 +22,7 @@ const experienceData = [
   },
   {
     title: "Frontend Development Intern",
-    company: "Goram Tech",
+    company: "Goama",
     duration: "June 2023 – August 2023",
     points: [
       "✓ Built responsive UI components using HTML, CSS, and basic JavaScript.",

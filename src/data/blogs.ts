@@ -33,7 +33,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-10",
     readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop",
     content: "Web development is at a crossroads. As AI becomes integrated into every step of the development lifecycle, we're seeing a fundamental shift in how we build, test, and deploy applications.\n\nEdge computing is no longer a niche concept. With platforms like Vercel and Cloudflare leading the charge, the gap between backend logic and the user is shrinking to milliseconds. In this article, we'll explore why serverless is evolving into 'edgeless' and what developers need to know to stay relevant.",
     tags: ["Development", "AI", "Edge Computing"],
     featured: true
@@ -51,7 +51,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-12",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop",
     content: "Neumorphism (Soft UI) is a trend that polarizes designers. Done poorly, it creates accessibility nightmares. Done well, it offers a tactile, premium feel that sets an application apart.\n\nThe key lies in monochromatic color palettes and the 'two-shadow' rule. One light shadow for the highlight, and one dark shadow for the depth. We'll break down the CSS behind my own portfolio's design system.",
     tags: ["Design", "UI", "Neumorphism"]
   },
@@ -68,7 +68,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-15",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
     content: "When a Next.js project grows beyond a few pages, the default structure often falls apart. Enterprise-grade applications require a modular approach.\n\nIn this technical guide, we'll look at the 'Feature-Based' folder structure, atomic design principles for components, and how to handle server-side state without over-complicating your codebase.",
     tags: ["Next.js", "Architecture", "JavaScript"]
   },
@@ -85,7 +85,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-18",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop",
     content: "Remote work is a double-edged sword. While it offers freedom, it also demands rigorous self-discipline. After three years of full-time remote development, I've narrowed down the tools and habits that actually move the needle.\n\nFrom time-blocking to asynchronous communication protocols, here is my blueprint for thriving outside the traditional office.",
     tags: ["Productivity", "Remote Work", "Mental Health"]
   },
@@ -102,7 +102,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-20",
     readTime: "10 min",
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=1000&auto=format&fit=crop",
     content: "If you're still writing pure JavaScript for production, you're living on borrowed time. TypeScript is no longer optional for serious teams.\n\nWe'll discuss how type safety drastically reduces runtime errors and why the initial setup cost is far outweighed by the long-term maintainability benefits.",
     tags: ["TypeScript", "JavaScript", "Best Practices"]
   },
@@ -119,7 +119,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-22",
     readTime: "7 min",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop",
     content: "Accessibility shouldn't be an afterthought; it should be baked into the design process from day one.\n\nLearn how to use semantic HTML, ARIA labels, and high-contrast color palettes to create a truly inclusive user experience. Accessibility is not just about compliance; it's about good design.",
     tags: ["a11y", "Inclusive Design", "UX"]
   },
@@ -136,7 +136,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-25",
     readTime: "15 min",
-    image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
     content: "Micro-SaaS products are a great way to generate passive income. The secret is to find a small, painful problem and solve it perfectly.\n\nI'll take you through my 30-day build process, from validation and development to marketing and getting my first paying customer.",
     tags: ["SaaS", "Indie Hacking", "Entrepreneurship"]
   },
@@ -153,7 +153,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-03-28",
     readTime: "9 min",
-    image: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1000&auto=format&fit=crop",
     content: "Writing code that works is easy. Writing code that can be understood by others and maintained over time is hard.\n\nWe'll cover core principles like SOLID, DRY, and KISS, and how to apply them in a modern React/Next.js environment.",
     tags: ["Clean Code", "Engineering", "Software Design"]
   },
@@ -170,7 +170,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-04-01",
     readTime: "11 min",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop",
     content: "A design system is more than just a library of UI components. It's a shared language between design and engineering.\n\nLearn how to structure your design tokens, document your components, and ensure your system is actually adopted by the rest of the organization.",
     tags: ["Design Systems", "Figma", "DevOps"]
   },
@@ -187,7 +187,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-04-03",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop",
     content: "The first year of your professional career is the most critical. It sets the foundation for everything that comes after.\n\nWe'll discuss how to ask for help without being annoying, how to manage your learning path, and how to effectively contribute to team meetings and code reviews.",
     tags: ["Career Advice", "Junior Developer", "Mentorship"]
   },
@@ -204,7 +204,7 @@ export const blogsData: Blog[] = [
     },
     date: "2024-04-05",
     readTime: "13 min",
-    image: "https://images.unsplash.com/photo-1544383023-5154b8293d44?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop",
     content: "Your database is the heart of your application. Scaling it is often the hardest part of systems design.\n\nWe'll dive into Postgres optimization, the pros and cons of MongoDB, and how to use caching (Redis) to take the load off your primary data store.",
     tags: ["Database", "SQL", "Scaleability"]
   },
@@ -221,8 +221,25 @@ export const blogsData: Blog[] = [
     },
     date: "2024-04-08",
     readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
     content: "Great products are built on deep user insights. User research is not just about interviews; it's about observation and empathy.\n\nLearn my framework for conducting user interviews that reveal hidden pain points and how to translate those insights into actionable product features.",
     tags: ["User Research", "Product Management", "UX Strategy"]
+  },
+  {
+    id: 13,
+    title: "The Power of Psychology in UX Design",
+    slug: "psychology-in-ux-design",
+    excerpt: "How understanding cognitive biases and mental models can help you build more intuitive and engaging products.",
+    category: "Design",
+    author: {
+      name: "Simanta Barua",
+      role: "UX Strategy Lead",
+      avatar: "https://i.ibb.co/FHkVf9N/simanta-1.jpg"
+    },
+    date: "2024-04-12",
+    readTime: "11 min",
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1000&auto=format&fit=crop",
+    content: "Design is not just about how it looks; it's about how it works and how it feels to the user. By tapping into psychological principles, we can guide user behavior and reduce friction.\n\nFrom Hicks's Law to the Zeigarnik effect, we'll explore the scientific foundations of great UX and how to apply them to your next project without manipulative dark patterns.",
+    tags: ["UX Design", "Psychology", "Product Strategy"]
   }
 ];

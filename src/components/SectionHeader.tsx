@@ -9,7 +9,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
   return (
     <SplitText
       text={title}
-      className="md:py-6  text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary my-text my-4 xl:my-6"
+      className="md:py-3 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-primary my-text my-2 xl:my-4"
       delay={100}
       duration={0.6}
       ease="power3.out"
