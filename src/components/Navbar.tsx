@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             )}
           </button>
           <Link href="/">
-            <span className="text-xl sm:text-2xl font-bold">
+            <span className="text-xl sm:text-2xl font-bold text-primary transition-colors duration-300">
               <span className="animate-pulse">&lt;</span>Simanta
               <span className="animate-pulse">/&gt;</span>
             </span>

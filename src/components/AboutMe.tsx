@@ -13,13 +13,13 @@ const AboutMe: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
             <SectionHeader title={"Who Am i"} />
-            <div className="text-gray-700">
+            <div className="text-secondary">
               <DecryptedText
                 text="I'm an experienced MERN stack developer with a passion for crafting efficient and user-friendly web applications. Skilled in MongoDB, Express.js, React, and Node.js, I thrive on solving complex problems and delivering high-quality solutions. Committed to continuous learning and staying updated with the latest web development trends."
                 speed={100}
                 maxIterations={20}
                 characters="ABCD1234!?"
-                className=" revealed text-xl font-semibold text-gray-600 md:mb-4"
+                className=" revealed text-xl font-semibold text-secondary md:mb-4"
                 parentClassName="all-letters"
                 encryptedClassName="encrypted"
                 animateOn="view"
@@ -35,7 +35,7 @@ const AboutMe: React.FC = () => {
                   separator=","
                   direction="up"
                   duration={0.5}
-                  className="count-up-text text-xl 2xl:text-2xl font-bold text-gray-600 my-4 ms-6"
+                  className="count-up-text text-xl 2xl:text-2xl font-bold text-secondary my-4 ms-6"
                 />
                 +
                 <br />
@@ -52,9 +52,9 @@ const AboutMe: React.FC = () => {
               </p>
             </div>
             <div className="mystyle h-20 p-1 md:p-4 w-full md:w-96 lg:ms-40 md:mt-14 flex items-center justify-center">
-              <p className="font-semibold text-xs md:text-xl">
+              <p className="font-semibold text-xs md:text-xl text-primary">
                 Get a project? Let’s talk. <br />
-                <Link href="#contact">simanta.barua1@gmail.com</Link>
+                <Link style={{ color: "var(--accent)" }} href="#contact">simanta.barua1@gmail.com</Link>
               </p>
             </div>
           </div>

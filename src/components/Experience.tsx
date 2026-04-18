@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
   return (
     <div
       id="experience"
-      className="text-gray-800 mystyle h-full p-4 md:p-8 my-8"
+      className="text-primary mystyle h-full p-4 md:p-8 my-8"
     >
       <div className="max-w-7xl  mx-auto">
         <div className="text-center mb-6 md:mb-8">
@@ -58,22 +58,22 @@ const Experience: React.FC = () => {
             <div className=" mystyle rounded-2xl shadow-md p-4" key={index}>
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div className="mb-2 md:mb-0">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-1">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary mb-1">
                     {exp.title}
                   </h3>
-                  <p className="text-lg md:text-xl font-semibold text-gray-600">
+                  <p className="text-lg md:text-xl font-semibold text-secondary">
                     {exp.company}
                   </p>
                 </div>
-                <div className="text-sm md:text-base text-gray-600 font-medium">
+                <div className="text-sm md:text-base text-secondary font-medium">
                   {exp.duration}
                 </div>
               </div>
 
-              <div className="space-y-3 md:space-y-4 text-gray-700">
+              <div className="space-y-3 md:space-y-4 text-secondary">
                 {exp.points.map((point, i) => (
                   <div key={i} className="flex items-start space-x-3">
-                    <span className="text-gray-500 mt-1 text-lg">✓</span>
+                    <span style={{ color: "var(--accent)" }} className="mt-1 text-lg">✓</span>
                     <p className="text-sm md:text-base leading-relaxed">
                       {point.replace("✓ ", "")}
                     </p>
@@ -82,14 +82,14 @@ const Experience: React.FC = () => {
               </div>
 
               {exp.recognition && (
-                <div className="mt-6 p-4 bg-gradient-to-r from-white-50 to-gray-100 rounded-2xl border-l-4 border-gray-400 border-2">
+                <div className="mt-6 p-4 rounded-2xl btn-primary border-l-4" style={{ borderColor: 'var(--accent)' }}>
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl">🏆</span>
                     <div>
-                      <p className="font-bold text-gray-800 text-sm md:text-base">
+                      <p className="font-bold text-primary text-sm md:text-base">
                         {exp.recognition.title}
                       </p>
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <p className="text-secondary text-sm md:text-base leading-relaxed">
                         {exp.recognition.detail}
                       </p>
                     </div>

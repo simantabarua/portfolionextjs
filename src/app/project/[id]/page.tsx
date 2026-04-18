@@ -24,11 +24,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br mystyle">
         <div className=" mystyle p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-          <div className="text-blue-500 text-5xl mb-4">🔍</div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          <div style={{ color: "var(--accent)" }} className="text-5xl mb-4">🔍</div>
+          <h2 className="text-2xl font-bold text-primary mb-2">
             Project Not Found
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-secondary mb-6">
             The project you're looking for doesn't exist or has been moved.
           </p>
           <Link
@@ -46,10 +46,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     <div className="min-h-screen bg-gradient-to-br mystyle py-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
-        <div className="mb-8">
+        <div className="mb-8 flex justify-center">
           <Link
             href="/#project"
-            className="inline-flex items-center text-blue-500 hover:text-blue-700 transition"
+            className="mystyle px-6 py-3 font-bold flex items-center transition-all duration-300 hover:scale-105"
+            style={{ color: "#6c63ff" }}
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -72,20 +73,20 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Project Header */}
         <div className=" mystyle rounded-2xl shadow-xl overflow-hidden mb-8">
           <div className="p-6 md:p-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               {project.projectName}
             </h1>
-            <p className="text-gray-600 text-lg mb-6">
+            <p className="text-secondary text-lg mb-6">
               {project.projectDescription}
             </p>
 
             {/* Project Links */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
+                className="mystyle flex items-center px-6 py-3 font-bold transition-all duration-300 hover:scale-105"
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -101,7 +102,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 href={project.liveSiteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-5 py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                className="mystyle flex items-center px-6 py-3 font-bold transition-all duration-300 hover:scale-105"
+                style={{ color: "var(--accent)" }}
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -135,9 +137,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Technologies Section */}
         <div className=" mystyle rounded-2xl shadow-xl p-6 md:p-8 mb-8">
           <div className="flex items-center mb-6">
-            <div className="bg-blue-100 p-2 rounded-lg mr-4">
+            <div className="p-2 rounded-lg mr-4" style={{ backgroundColor: "var(--inset-shadow-dark)" }}>
               <svg
-                className="w-6 h-6 text-blue-500"
+                className="w-6 h-6"
+                style={{ color: "var(--accent)" }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -151,7 +154,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 ></path>
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-gray-800">
+            <h2 className="text-2xl font-bold text-primary">
               Technologies Used
             </h2>
           </div>
@@ -160,7 +163,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg font-medium"
+                className="tech-badge"
               >
                 {tech}
               </span>
@@ -171,7 +174,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Features Section */}
         <div className=" mystyle rounded-2xl shadow-xl p-6 md:p-8">
           <div className="flex items-center mb-6">
-            <div className="bg-green-100 p-2 rounded-lg mr-4">
+            <div className="p-2 rounded-lg mr-4" style={{ backgroundColor: "var(--inset-shadow-dark)" }}>
               <svg
                 className="w-6 h-6 text-green-500"
                 fill="none"
@@ -187,14 +190,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 ></path>
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-gray-800">Key Features</h2>
+            <h2 className="text-2xl font-bold text-primary">Key Features</h2>
           </div>
 
           <ul className="space-y-4">
             {project.features.map((feature, index) => (
               <li key={index} className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: "var(--inset-shadow-dark)" }}>
                     <svg
                       className="w-4 h-4 text-green-500"
                       fill="none"
@@ -211,7 +214,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </svg>
                   </div>
                 </div>
-                <span className="text-gray-700">{feature}</span>
+                <span className="text-secondary">{feature}</span>
               </li>
             ))}
           </ul>

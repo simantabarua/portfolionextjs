@@ -18,21 +18,12 @@ export function DarkModeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle dark mode"
-      className="
-        flex items-center justify-center
-        w-10 h-10
-        rounded-full
-        border border-gray-300 dark:border-gray-700
-        bg-white dark:bg-gray-800
-        text-gray-700 dark:text-yellow-400
-        hover:bg-gray-100 dark:hover:bg-gray-700
-        transition-colors duration-300 mystyle
-      "
+      className="nav-link flex items-center justify-center w-10 h-10 transition-all duration-300"
     >
       {theme === "dark" ? (
-        <FiSun className="w-5 h-5" />
+        <FiSun className="w-5 h-5" style={{ color: "var(--accent)" }} />
       ) : (
-        <FiMoon className="w-5 h-5" />
+        <FiMoon className="w-5 h-5 text-secondary" />
       )}
     </button>
   );

@@ -16,7 +16,7 @@ const Banner: React.FC = () => {
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-semibold my-text leading-tight">
             <AnimateText />
           </h1>
-          <p className="text-lg md:text-xl font-medium text-gray-600">
+          <p className="text-lg md:text-xl font-medium text-secondary">
             I{"'"}m Simanta, a Professional Web Developer. Need any help?
           </p>
         </div>
@@ -24,7 +24,7 @@ const Banner: React.FC = () => {
         {/* Buttons */}
         <div className="flex flex-col justify-center sm:flex-row gap-4">
           <Link href="#contact">
-            <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 border-2 border-gray-500 transition-all duration-300 ease-in-out">
+            <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out">
               Hire me
             </button>
           </Link>
@@ -33,7 +33,7 @@ const Banner: React.FC = () => {
             target="_blank"
             href="https://drive.google.com/file/d/1zo9LbttL28RDuu0po8iiKjVXwqKo8fza/view?usp=sharing"
           >
-            <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 border-2 border-gray-500  transition-all duration-300 ease-in-out">
+            <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out">
               View Resume
             </button>
           </Link>

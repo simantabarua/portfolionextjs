@@ -8,7 +8,7 @@ const Activity: React.FC = () => {
       <div className="text-center">
         <SectionHeader title={"Enjoyments"} />
       </div>
-      <div className="flex justify-center md:justify-between items-center flex-wrap gap-4 my-2 md:my-8 text-gray-600">
+      <div className="flex justify-center md:justify-between items-center flex-wrap gap-4 my-2 md:my-8 text-secondary">
         <FaCode className="w-20 h-20 md:w-32 md:h-32 mystyle p-4" />
         <FaBookReader className="w-20 h-20 md:w-32 md:h-32 mystyle p-4" />
         <FaBicycle className="w-20 h-20 md:w-32 md:h-32 mystyle p-4" />

@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
         <div className="text-center">
           <SectionHeader title={"Contact me"} />
         </div>
-        <p className="text-gray-500 capitalize text-sm md:text-xl md:font-bold text-center mt-2">
+        <p className="text-secondary capitalize text-sm md:text-xl md:font-bold text-center mt-2">
           Need any help? Let&apos;s talk{" "}
         </p>
         <form ref={form} onSubmit={sendEmail}>

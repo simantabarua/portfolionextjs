@@ -21,26 +21,29 @@ const Projects: React.FC = () => {
           </div>
         </div>
         <div className="p-4 flex-grow">
-          <h2 className="text-xl font-bold mb-2">{project.projectName}</h2>
-          <p className="text-gray-600 mb-4">{project.projectDescription}</p>
+          <h2 className="text-xl font-bold mb-2 text-primary">{project.projectName}</h2>
+          <p className="text-secondary mb-4">{project.projectDescription}</p>
           <div className="flex justify-between px-4">
             <Link
               href={project.githubLink}
               target="_blank"
-              className="text-blue-500 font-bold hover:text-blue-700"
+              className="font-bold hover:underline"
+              style={{ color: "var(--accent)" }}
             >
               GitHub
             </Link>
             <Link
               href={project.liveSiteLink}
               target="_blank"
-              className="text-blue-500 font-bold hover:text-blue-700"
+              className="font-bold hover:underline"
+              style={{ color: "var(--accent)" }}
             >
               Live Site
             </Link>
             <Link
               href={`/project/${project.id}`}
-              className="text-blue-500 font-bold hover:text-blue-700"
+              className="font-bold hover:underline"
+              style={{ color: "var(--accent)" }}
             >
               Project Details
             </Link>
@@ -49,7 +52,7 @@ const Projects: React.FC = () => {
             {project.technologies.map((technology: string, index: number) => (
               <span
                 key={index}
-                className="mr-2 bg-gray-200 px-2 py-1 rounded-lg text-sm text-gray-700"
+                className="tech-badge"
               >
                 {technology}
               </span>

@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
         />
       <div className="text-center">
       
-        <p className="font-bold text-xl md:text-4xl my-2 md:my-4 text-gray-400">
+        <p className="font-bold text-xl md:text-4xl my-2 md:my-4 text-secondary">
           Designed and Developed by Simanta
         </p>
-        <p className="font-semibold my-2">
+        <p className="font-semibold my-2 text-primary">
           Simanta Barua, {new Date().getFullYear()} All rights reserved.
         </p>
       </div>

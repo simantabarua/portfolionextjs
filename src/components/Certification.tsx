@@ -20,7 +20,7 @@ const Certification: React.FC = () => {
               />
             </div>
             <div className="p-4 flex-grow">
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-xl font-bold mb-2 text-primary">
                 Completed Web Development course MERN Stack
               </h2>
             </div>
@@ -38,7 +38,7 @@ const Certification: React.FC = () => {
               />
             </div>
             <div className="p-4 flex-grow">
-              <h2 className="text-xl font-bold mb-2">Responsive Web Design</h2>
+              <h2 className="text-xl font-bold mb-2 text-primary">Responsive Web Design</h2>
             </div>
           </div>
         </div>
@@ -60,11 +60,11 @@ const Certification: React.FC = () => {
               />
             </div>
             <div className="p-4 flex-grow">
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-xl font-bold mb-2 text-primary">
                 Diploma in Computer Science & Engineering – Cox’s Bazar
                 Polytechnic Institute
               </h2>
-              <p className="text-gray-600 mt-2">Graduated: 2023</p>
+              <p className="text-secondary mt-2">Graduated: 2023</p>
             </div>
           </div>
         </div>
@@ -80,10 +80,10 @@ const Certification: React.FC = () => {
               />
             </div>
             <div className="p-4 flex-grow">
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-xl font-bold mb-2 text-primary">
                 CCNA & Linux Administration – CodeTech IT
               </h2>
-              <p className="text-gray-600 mt-2">Completed: 2022</p>
+              <p className="text-secondary mt-2">Completed: 2022</p>
             </div>
           </div>
         </div>
