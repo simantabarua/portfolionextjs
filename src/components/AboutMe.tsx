@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
       <div className="max-w-7xl mx-auto my-10">
         <div className="flex flex-col lg:flex-row justify-between gap-5">
           <div>
-            <SectionHeader title={"Who Am i"} />
+            <SectionHeader title={"About Me"} />
             <div className="text-secondary">
               <DecryptedText
                 text="I'm an experienced MERN stack developer with a passion for crafting efficient and user-friendly web applications. Skilled in MongoDB, Express.js, React, and Node.js, I thrive on solving complex problems and delivering high-quality solutions. Committed to continuous learning and staying updated with the latest web development trends."

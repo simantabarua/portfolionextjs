@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import SectionHeader from "./SectionHeader";
-import ReCAPTCHA from "react-google-recaptcha";
+
 
 interface FormData {
   user_name: HTMLInputElement;
@@ -17,34 +17,18 @@ const Contact: React.FC = () => {
   const [isMessageSend, setIsMessageSend] = useState<boolean>(false);
   const [isSending, setIsSending] = useState<boolean>(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-  const [captchaError, setCaptchaError] = useState<string>("");
-  const [captchaSize, setCaptchaSize] = useState<"normal" | "compact">(
-    "normal"
-  );
+
   const form = useRef<HTMLFormElement>(null);
 
-  // Handle responsive CAPTCHA size
-  useEffect(() => {
-    const handleResize = () => {
-      setCaptchaSize(window.innerWidth < 640 ? "compact" : "normal");
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
-  function onChange(value: string | null): void {
-    setCaptchaValue(value);
-    setCaptchaError("");
-  }
+
+
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.current) return;
 
     setErrors({});
-    setCaptchaError("");
     
     const formData = new FormData(form.current);
     const data = {
@@ -64,22 +48,19 @@ const Contact: React.FC = () => {
       return;
     }
 
-    if (!captchaValue) {
-      setCaptchaError("Please complete the CAPTCHA");
-      return;
-    }
+
 
     setIsSending(true);
     try {
       await emailjs.sendForm(
-        "service_j1i7ccl",
-        "template_3atgipi",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form.current,
-        "jfTx89WyVT9o2vI4P"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
       setIsMessageSend(true);
       form.current?.reset();
-      setCaptchaValue(null);
+
     } catch (error) {
       console.error("Error sending email:", error);
     } finally {
@@ -138,7 +119,7 @@ const Contact: React.FC = () => {
               </div>
             )}
             
-            {captchaError && <p className="text-red-500 text-xs text-center">{captchaError}</p>}
+
             
             <button
               type="submit"

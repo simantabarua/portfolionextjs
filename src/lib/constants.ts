@@ -1,4 +1,4 @@
-export const SITE_URL = "https://simanta.web.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const AUTHOR_NAME = "Simanta Barua";
 export const SITE_TITLE = "Simanta Barua | Full Stack React & Next.js Developer";
 export const SITE_DESCRIPTION = "Hire Simanta Barua, an expert MERN stack & Next.js developer for custom web application development, scalable architectures, and enterprise solutions.";

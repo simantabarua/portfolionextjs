@@ -2,14 +2,9 @@ import { Blog, Project } from "@/types";
 import { projectsData } from "@/data/projects";
 import { blogsData } from "@/data/blogs";
 
-/**
- * Service to handle data fetching for Blogs and Projects.
- * Centralizing this logic ensures consistent error handling and type safety.
- */
+
 export class DataService {
   static async getBlogs(): Promise<Blog[]> {
-    // In a real production environment, this could be an external API.
-    // For static export, we return the local data array directly.
     return blogsData as unknown as Blog[];
   }
 

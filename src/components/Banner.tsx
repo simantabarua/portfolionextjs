@@ -32,7 +32,7 @@ const Banner: React.FC = () => {
 
           <Link
             target="_blank"
-            href="https://drive.google.com/file/d/1zo9LbttL28RDuu0po8iiKjVXwqKo8fza/view?usp=sharing"
+            href={process.env.NEXT_PUBLIC_RESUME_URL || "#"}
           >
             <button className="btn-primary w-full sm:w-auto px-5 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out">
               View Resume
