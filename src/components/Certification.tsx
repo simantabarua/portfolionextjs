@@ -1,5 +1,28 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import SectionHeader from "./SectionHeader";
+import Image from "next/image";
+
+const CertImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className="card-img h-64 relative overflow-hidden bg-secondary/10 rounded-t-3xl">
+      {isLoading && (
+        <div className="absolute inset-0 bg-secondary/20 animate-pulse z-10" />
+      )}
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={`object-cover rounded-t-3xl transition-all duration-700 ${
+          isLoading ? "opacity-0 scale-105" : "opacity-100 scale-100"
+        }`}
+        onLoad={() => setIsLoading(false)}
+      />
+    </div>
+  );
+};
 
 const Certification: React.FC = () => {
   return (
@@ -11,14 +34,10 @@ const Certification: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <div className="h-full w-full mystyle">
           <div className="h-full flex flex-col">
-            <div className="card-img h-64">
-              <img
-                src="https://i.ibb.co/4MDmrK4N/phero-Certification.png"
-                alt="Certification"
-                className="object-cover w-full rounded-t-3xl"
-                loading="lazy"
-              />
-            </div>
+            <CertImage
+              src="https://i.ibb.co/4MDmrK4N/phero-Certification.png"
+              alt="Certification"
+            />
             <div className="p-4 flex-grow">
               <h2 className="text-xl font-bold mb-2 text-primary">
                 Completed Web Development course MERN Stack
@@ -29,14 +48,10 @@ const Certification: React.FC = () => {
 
         <div className="h-full w-full mystyle">
           <div className="h-full flex flex-col">
-            <div className="card-img h-64">
-              <img
-                src="https://i.ibb.co/5DmK33N/freecode-Certification.png"
-                alt="Certification"
-                className="object-cover w-full rounded-t-3xl"
-                loading="lazy"
-              />
-            </div>
+            <CertImage
+              src="https://i.ibb.co/5DmK33N/freecode-Certification.png"
+              alt="Certification"
+            />
             <div className="p-4 flex-grow">
               <h2 className="text-xl font-bold mb-2 text-primary">Responsive Web Design</h2>
             </div>
@@ -51,14 +66,10 @@ const Certification: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <div className="h-full w-full mystyle">
           <div className="h-full flex flex-col">
-            <div className="card-img h-64">
-              <img
-                src="https://i.ibb.co/3F7K7gG/polytechnic.png"
-                alt="Diploma in CSE"
-                className="object-cover w-full rounded-t-3xl"
-                loading="lazy"
-              />
-            </div>
+            <CertImage
+              src="https://i.ibb.co/3F7K7gG/polytechnic.png"
+              alt="Diploma in CSE"
+            />
             <div className="p-4 flex-grow">
               <h2 className="text-xl font-bold mb-2 text-primary">
                 Diploma in Computer Science & Engineering – Cox’s Bazar
@@ -71,14 +82,10 @@ const Certification: React.FC = () => {
 
         <div className="h-full w-full mystyle">
           <div className="h-full flex flex-col">
-            <div className="card-img h-64">
-              <img
-                src="https://i.ibb.co/1dR9M5n/ccna-linux.png"
-                alt="CCNA & Linux Admin"
-                className="object-cover w-full rounded-t-3xl"
-                loading="lazy"
-              />
-            </div>
+            <CertImage
+              src="https://i.ibb.co/1dR9M5n/ccna-linux.png"
+              alt="CCNA & Linux Admin"
+            />
             <div className="p-4 flex-grow">
               <h2 className="text-xl font-bold mb-2 text-primary">
                 CCNA & Linux Administration – CodeTech IT

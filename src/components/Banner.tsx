@@ -1,10 +1,13 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import AnimateText from "./AnimateText";
 import Image from "next/image";
 
 const Banner: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="lg:h-[80vh] p-6 md:p-10 lg:p-16 rounded-b-[40px] banner flex flex-col-reverse lg:flex-row justify-between items-center lg:gap-16">
       {/* Left Content */}
@@ -43,13 +46,18 @@ const Banner: React.FC = () => {
 
       {/* Right Content */}
       <div className="flex flex-col items-center gap-6">
-        <div className="my-img max-w-xs lg:max-w-md">
+        <div className="my-img max-w-xs lg:max-w-md relative overflow-hidden rounded-full">
+          {isLoading && (
+            <div className="absolute inset-0 bg-secondary/20 animate-pulse rounded-full" />
+          )}
           <Image
-            className="rounded-full w-full p-2 grayscale transition duration-300 hover:grayscale-0 cursor-pointer"
+            className={`rounded-full w-full p-2 grayscale transition-all duration-700 hover:grayscale-0 cursor-pointer ${isLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
             src="https://i.ibb.co/FHkVf9N/simanta-1.jpg"
             alt="Simanta Image"
             width={300}
             height={300}
+            priority
+            onLoad={() => setIsLoading(false)}
           />
         </div>
 

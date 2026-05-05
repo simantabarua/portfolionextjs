@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
 console.log(`
 
@@ -15,10 +16,17 @@ console.log(`
 `)
 
 const Footer: React.FC = () => {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   const backToTop = (): void => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
+
   return (
     <div className="mystyle  mx-auto p-10 h-full cursor-pointer">
         <BsArrowUp
@@ -33,7 +41,7 @@ const Footer: React.FC = () => {
           Designed and Developed by Simanta
         </p>
         <p className="font-semibold my-2 text-primary">
-          Simanta Barua, {new Date().getFullYear()} All rights reserved.
+          Simanta Barua, {year || 2026} All rights reserved.
         </p>
       </div>
     </div>

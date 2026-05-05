@@ -5,6 +5,27 @@ import Link from "next/link";
 import { projectsData, Project } from "@/data/projects";
 import Image from "next/image";
 
+const ProjectImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className="card-img h-64 relative overflow-hidden bg-secondary/10 rounded-t-3xl">
+      {isLoading && (
+        <div className="absolute inset-0 bg-secondary/20 animate-pulse z-10" />
+      )}
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={`object-cover rounded-t-3xl transition-all duration-700 ${
+          isLoading ? "opacity-0 scale-105" : "opacity-100 scale-100"
+        }`}
+        onLoad={() => setIsLoading(false)}
+      />
+    </div>
+  );
+};
+
 const Projects: React.FC = () => {
   const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
 
@@ -12,14 +33,7 @@ const Projects: React.FC = () => {
     <div key={index} className="h-full w-full mystyle">
       <div className="h-full flex flex-col">
         <div>
-          <div className="card-img h-64 relative">
-            <Image
-              src={project.image}
-              alt={project.projectName}
-              fill
-              className="object-cover rounded-t-3xl"
-            />
-          </div>
+          <ProjectImage src={project.image} alt={project.projectName} />
         </div>
         <div className="p-4 flex-grow">
           <h2 className="text-xl font-bold mb-2 text-primary">{project.projectName}</h2>
