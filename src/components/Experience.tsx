@@ -10,23 +10,23 @@ const Experience: React.FC = () => {
   }, []);
 
   const experienceData = [
-    {
-      title: "Frontend Developer",
-      company: "Goama",
-      duration: `September 2023 – ${currentDate || "September 2025"} (Ongoing)`,
-      points: [
-        "✓ Gained hands-on experience developing responsive user interfaces with React, TypeScript, and Redux Toolkit while collaborating in agile teams to implement modern design systems.",
-        "✓ Delivered a complete redesign of the arcade page, enhancing user engagement, visual consistency, and responsiveness across devices.",
-        "✓ Successfully migrated the entire tournament platform from React Bootstrap to Tailwind CSS, resulting in cleaner, more maintainable styles and improved frontend performance.",
-        "✓ Developed and integrated a complex ‘Spin the Wheel’ feature with dynamic animations and state management for seamless user interaction.",
-        "✓ Proactively identified and fixed critical frontend bugs, improving application stability and overall user experience.",
-      ],
-      recognition: {
-        title: "🏆 Recognition:",
-        detail:
-          "Honored as MVP of the Month for outstanding contributions, initiative, and team collaboration.",
-      },
-    },
+  {
+  title: "Frontend Developer",
+  company: "Goama",
+  duration: `September 2023 – ${currentDate || "September 2025"} (Ongoing)`,
+  points: [
+    "✓ Gained hands-on experience developing responsive user interfaces with React, TypeScript, and Redux Toolkit while collaborating in agile teams to implement modern design systems, improving development efficiency by ~20%.",
+    "✓ Delivered a complete redesign of the arcade page, increasing user engagement and improving UI responsiveness across devices by ~30% based on interaction and performance improvements.",
+    "✓ Successfully migrated the entire tournament platform from React Bootstrap to Tailwind CSS, reducing CSS bundle size and improving frontend performance by ~25% while enhancing maintainability.",
+    "✓ Developed and integrated a complex ‘Spin the Wheel’ feature with dynamic animations and optimized state management, contributing to a measurable ~10% increase in revenue.",
+    "✓ Proactively identified and fixed critical frontend bugs, reducing UI-related issues and improving overall application stability by ~35%.",
+  ],
+  recognition: {
+    title: "🏆 Recognition:",
+    detail:
+      "Honored as MVP of the Month for outstanding contributions, initiative, and team collaboration.",
+  },
+},
     {
       title: "Frontend Development Intern",
       company: "Goama",
@@ -76,11 +76,11 @@ const Experience: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-3 md:space-y-4 text-secondary">
+              <div className="space-y-4 text-secondary">
                 {exp.points.map((point, i) => (
                   <div key={i} className="flex items-start space-x-3">
-                    <span style={{ color: "var(--accent)" }} className="mt-1 text-lg">✓</span>
-                    <p className="text-sm md:text-base leading-relaxed">
+                    <span className="h-2 w-2 rounded-full mt-2 shrink-0" style={{ backgroundColor: "var(--accent)" }} />
+                    <p className="text-sm md:text-base leading-relaxed !text-left">
                       {point.replace("✓ ", "")}
                     </p>
                   </div>

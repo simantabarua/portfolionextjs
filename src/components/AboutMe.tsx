@@ -15,11 +15,11 @@ const AboutMe: React.FC = () => {
             <SectionHeader title={"About Me"} />
             <div className="text-secondary">
               <DecryptedText
-                text="I'm an experienced MERN stack developer with a passion for crafting efficient and user-friendly web applications. Skilled in MongoDB, Express.js, React, and Node.js, I thrive on solving complex problems and delivering high-quality solutions. Committed to continuous learning and staying updated with the latest web development trends."
+                text="I'm a MERN Stack Developer with 2.5+ years of experience building scalable, high-performance web applications. I specialize in React, Next.js, Node.js, Express, and MongoDB, with a strong focus on clean architecture, reusable components, and optimized user experiences. I enjoy translating complex requirements into maintainable, production-ready solutions and continuously evolving with modern web technologies."
                 speed={100}
                 maxIterations={20}
                 characters="ABCD1234!?"
-                className=" revealed text-xl font-semibold text-secondary md:mb-4"
+                className="revealed text-xl font-semibold text-secondary md:mb-4"
                 parentClassName="all-letters"
                 encryptedClassName="encrypted"
                 animateOn="view"

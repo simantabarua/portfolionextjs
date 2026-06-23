@@ -9,20 +9,24 @@ const Banner: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="lg:h-[80vh] p-6 md:p-10 lg:p-16 rounded-b-[40px] banner flex flex-col-reverse lg:flex-row justify-between items-center lg:gap-16">
+    <div className="lg:h-[80vh] p-6 md:p-10 lg:p-16 rounded-b-[40px] banner flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-16">
       {/* Left Content */}
       <div className="lg:flex-1 flex flex-col justify-center space-y-6">
         <div className="space-y-4">
           <p className="text-xl md:text-3xl lg:text-4xl font-semibold my-text">
-            Hello,
+            Hello, I'm Simanta Barua
           </p>
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-semibold my-text leading-tight">
             <span className="sr-only">Simanta Barua - Full Stack React Developer</span>
             <AnimateText />
           </h1>
-          <h2 className="text-lg md:text-xl font-medium text-secondary leading-relaxed">
-            I{"'"}m Simanta, an expert Next.js & MERN Stack Developer. specializing in SEO-optimized, <strong className="font-bold text-primary">Custom Web Application Development</strong> and Enterprise Solutions.
-          </h2>
+         <h2 className="text-lg md:text-xl font-medium text-secondary leading-relaxed">
+  I’m an expert Next.js & MERN Stack Developer specializing in SEO-optimized{" "}
+  <strong className="font-bold text-primary">
+    Custom Web Application Development
+  </strong>{" "}
+  and enterprise solutions. I help transform ideas into scalable, reliable digital products through modern full-stack engineering.
+</h2>
         </div>
 
         {/* Buttons */}
